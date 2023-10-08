@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>王曼昱战绩</title>
+        <style>
+            .black{
+                text-decoration: none;
+                color: black;
+            }
+            body{
+                background: white;
+                margin-bottom: 50px;
+                background-image: url("./img/yu.jpg");
+                background-repeat: no-repeat;
+                background-position: center;
+                background-attachment: fixed;
+                background-size: 100%;
+            }
+            .navbar {
+	    position: absolute;
+		width: 100vm;
+		height: 100px;
+	}
+.navbar input {
+	/* 隐藏复选框 */
+	display: none;
+}
+.navbar label {
+	/* 绝对定位 */
+	position: absolute;
+	width: 50px;
+	height: 50px;
+	/* 圆角属性 */
+	border-radius: 6px;
+	/* 鼠标移入变小手 */
+	cursor: pointer;
+	transition: all 0.5s ease-out;
+}
+/* 先把label元素内的两条线定义一下 */
+.navbar label::before,
+.navbar label::after {
+	content: "";
+	position: absolute;
+	left: 5px;
+	width: 40px;
+	height: 4px;
+	border-radius: 4px;
+	background-color: #042a41;
+	transition: transform 0.3s ease-out, top 0.3s ease-out 0.3s;
+}
+.navbar label::before {
+	top: calc(50% - 10px);
+}
+.navbar label::after {
+	top: calc(50% + 6px);
+}
+.navbar input:checked + label::before {
+	top: calc(50% - 2px);
+	transform: rotate(-45deg);
+	transition: top 0.3s ease-out, transform 0.3s ease-out 0.3s;
+}
+.navbar input:checked + label::after {
+	top: calc(50% - 2px);
+	transform: rotate(45deg);
+	transition: top 0.3s ease-out, transform 0.3s ease-out 0.3s;
+}
+.navbar ul {
+	position: relative;
+	top: 100px;
+	width: 100%;
+	opacity: 0;
+	transform: scaleY(0);
+	transform-origin: 50% 0;
+	transition: all 0.5s ease-out;
+}
+.navbar ul li {
+	list-style: none;
+	width: 100%;
+	height: 66px;
+}
+.navbar ul li a {
+	display: block;
+	width: 100%;
+	height: 100%;
+	line-height: 66px;
+	text-align: center;
+	font-size: 18px;
+	font-weight: 700;
+	/* 取消文字下划线 */
+	text-decoration: none;
+	color: #042a41;
+	border: 1px solid rgba(198, 217, 237, 0.3);
+	transition: all 0.3s ease-out;
+}
+.navbar input:checked ~ ul {
+	opacity: 1;
+	transform: scaleY(1);
+}
+            .content{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin: 0px 30px;
+                height: 50px;
+                border-radius: 10px;
+                transition: 0.4s;
+            }
+            .content1{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin: 0px 30px;
+                height: 50px;
+                border-radius: 10px;
+                transition: 0.4s;
+                color: #3399CC;
+            }
+            .content:hover{
+                scale:0.97;
+                box-shadow: none;
+                background: #3399CC;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="navbar">
+            <input type="checkbox" id="nav" /><label for="nav"></label>
+            <ul>
+                <li><a href="WMY.html" >全部成绩</a></li>
+                <li><a href="WMY-WS.html" >女单成绩</a></li>
+                <li><a href="WMY-WD.html" >女双成绩</a></li>
+                <li><a href="WMY-MD.html" >混双成绩</a></li>
+                <li><a href="WMY-ALL.html" >团体成绩</a></li>
+            </ul>
+        </div>
+    <table border="5" align="center" width="600" bordercolor=#3399CC cellspacing="0">
+            <tr align="center">
+                <td>比赛年份</td>
+                <td>比赛名称</td>
+                <td>比赛类别</td>
+                <td>比赛成绩</td>
+            </tr>
+            <tr align="center">
+                <td rowspan="8">2023</td>
+                <td>WTT球星挑战赛兰州站</td>
+                <td>女双</td>
+                <td>金牌🥇</td>
+            </tr>
+            <tr align="center">
+                <td>杭州亚运会</td>
+                <td>团体</td>
+                <td>金牌🥇</td>
+            </tr>
+            <tr align="center">
+                <td rowspan="3">亚洲乒乓球锦标赛（平昌）</td>
+                <td>女单</td>
+                <td>金牌🥇</td>
+            </tr>
+            <tr align="center">
+                <td>女双</td>
+                <td>金牌🥇</td>
+            </tr>
+            <tr align="center">
+                <td>团体</td>
+                <td>金牌🥇</td>
+            </tr>
+            <tr align="center">
+                <td >德班世乒赛</td>
+                <td>女双</td>
+                <td>铜牌🥉</td>
+            </tr>
+            <tr align="center">
+                <td >WTT澳门冠军赛</td>
+                <td>女单</td>
+                <td>金牌🥇</td>
+            </tr>
+            <tr align="center">
+                <td >WTT新加坡大满贯</td>
+                <td>女双</td>
+                <td>金牌🥇</td>
+            </tr>
+            <tr align="center">
+                <td rowspan="9">2022</td>
+                <td>乒超联赛</td>
+                <td>团体</td>
+                <td>金牌🥇</td>
+            </tr>
+            <tr align="center">
+                <td rowspan="2">全国乒乓球锦标赛</td>
+                <td>女单</td>
+                <td>银牌🥈</td>
+            </tr>
+            <tr align="center">
+                <td>混双</td>
+                <td>金牌🥇</td>
+                </tr>
+            <tr align="center">
+                <td>成都世乒赛</td>
+                <td>团体</td>
+                <td>金牌🥇</td>
+            </tr>
+            <tr align="center">
+                <td>WTT冠军赛布达佩斯站</td>
+                <td>女单</td>
+                <td>金牌🥇</td>
+            </tr>
+            <tr  align="center">
+                <td rowspan="2">WTT球星挑战赛布达佩斯站</td>
+                <td>女双</td>
+                <td>金牌🥇</td>
+            </tr>
+                <tr align="center">
+                    <td>混双</td>
+                    <td>金牌🥇</td>
+                </tr>
+                <tr align="center">
+                    <td rowspan="2">WTT新加坡大满贯</td>
+                    <td>女单</td>
+                    <td>银牌🥈</td>
+                </tr>
+                <tr align="center">
+                    <td>女双</td>
+                    <td>金牌🥇</td>
+                </tr>
+                <tr align="center">
+                    <td rowspan="7">2021</td>
+                    <td rowspan="2">休斯顿世乒赛</td>
+                    <td>女单</td>
+                    <td>金牌🥇</td>
+                </tr>
+                <tr align="center">
+                    <td>女双</td>
+                    <td>金牌🥇</td>
+                </tr>
+                <tr align="center">
+                    <td >乒超联赛</td>
+                    <td>团体</td>
+                    <td>金牌🥇</td>
+                </tr>
+                <tr align="center">
+                    <td rowspan="3">第十四届全国运动会</td>
+                    <td>女单</td>
+                    <td>金牌🥇</td>
+                </tr>
+                <tr align="center">
+                    <td>女双</td>
+                    <td>金牌🥇</td>
+                </tr>
+                <tr align="center">
+                    <td>混双</td>
+                    <td>银牌🥈</td>
+                </tr>
+                <tr align="center">
+                    <td>东京奥运会</td>
+                    <td>团体</td>
+                    <td>金牌🥇</td>
+                </tr>
+                <tr align="center">
+                    <td rowspan="7">2020</td>
+                    <td>总决赛</td>
+                    <td>女单</td>
+                    <td>银牌🥈</td>
+                </tr>
+                <tr align="center">
+                    <td>卡塔尔公开赛</td>
+                    <td>女双</td>
+                    <td>金牌🥇</td>
+                </tr>
+                <tr align="center">
+                    <td>德国公开赛</td>
+                    <td>女双</td>
+                    <td>金牌🥇</td>
+                </tr>
+                <tr align="center">
+                    <td rowspan="3">全国锦标赛</td>
+                    <td>女单</td>
+                    <td>铜牌🥉</td>
+                </tr>
+                <tr align="center">
+                    <td>女双</td>
+                    <td>金牌🥇</td>
+                </tr>
+                <tr align="center">
+                    <td>混双</td>
+                    <td>金牌🥇</td>
+                </tr>
+                <tr align="center">
+                    <td>乒超联赛</td>
+                    <td>团体</td>
+                    <td>银牌🥈</td>
+                </tr>
+                <tr align="center">
+                    <td rowspan="18">2019</td>
+                    <td>总决赛</td>
+                    <td>女单</td>
+                    <td>银牌🥈</td>
+                </tr>
+                <tr align="center">
+                    <td rowspan="2">卡塔尔公开赛</td>
+                    <td>女单</td>
+                    <td>金牌🥇</td>
+                </tr>
+                <tr align="center">
+                    <td>女双</td>
+                    <td>金牌🥇</td>
+                </tr>
+                <tr align="center">
+                    <td>澳大利亚公开赛</td>
+                    <td>女双</td>
+                    <td>金牌🥇</td>
+                </tr>
+                <tr align="center">
+                    <td>韩国公开赛</td>
+                    <td>女双</td>
+                    <td>金牌🥇</td>
+                </tr>
+                <tr align="center">
+                    <td>匈牙利公开赛</td>
+                    <td>女双</td>
+                    <td>金牌🥇</td>
+                </tr>
+                <tr align="center">
+                    <td rowspan="2">中国公开赛</td>
+                    <td>女单</td>
+                    <td>银牌🥈</td>
+                </tr>
+                <tr align="center">
+                    <td>女双</td>
+                    <td>银牌🥈</td>
+                </tr>
+                <tr align="center">
+                    <td>日本公开赛</td>
+                    <td>女双</td>
+                    <td>银牌🥈</td>
+                </tr>
+                <tr align="center">
+                    <td>德国公开赛</td>
+                    <td>混双</td>
+                    <td>银牌🥈</td>
+                </tr>
+                <tr align="center">
+                    <td>T2联赛（马来西亚）</td>
+                    <td>女单</td>
+                    <td>银牌🥈</td>
+                </tr>
+                <tr align="center">
+                    <td>T2联赛（新加坡）</td>
+                    <td>女单</td>
+                    <td>铜牌🥉</td>
+                </tr>
+                <tr align="center">
+                    <td>亚洲乒乓球锦标赛</td>
+                    <td>女双</td>
+                    <td>银牌🥈</td>
+                </tr>
+                <tr align="center">
+                    <td>东京世界杯</td>
+                    <td>团体</td>
+                    <td>金牌🥇</td>
+                </tr>
+                <tr align="center">
+                    <td>亚洲乒乓球锦标赛</td>
+                    <td>团体</td>
+                    <td>金牌🥇</td>
+                </tr>
+                <tr align="center">
+                    <td>全国锦标赛</td>
+                    <td>团体</td>
+                    <td>铜牌🥉</td>
+                </tr>
+                <tr align="center">
+                    <td rowspan="2">布达佩斯世乒赛</td>
+                    <td>女单</td>
+                    <td>铜牌🥉</td>
+                </tr>
+                <tr align="center">
+                    <td>女双</td>
+                    <td>金牌🥇</td>
+                </tr>
+                <tr align="center">
+                    <td rowspan="19">2018</td>
+                    <td rowspan="2">卡塔尔公开赛</td>
+                    <td>女单</td>
+                    <td>银牌🥈</td>
+                </tr>
+                <tr align="center">
+                    <td>女双</td>
+                    <td>金牌🥇</td>
+                </tr>
+                <tr align="center">
+                    <td>中国公开赛</td>
+                    <td>女单</td>
+                    <td>金牌🥇</td>
+                </tr>
+                <tr align="center">
+                    <td rowspan="2">香港公开赛</td>
+                    <td>女单</td>
+                    <td>金牌🥇</td>
+                </tr>
+                <tr align="center">
+                    <td>女双</td>
+                    <td>银牌🥈</td>
+                </tr>
+                <tr align="center">
+                    <td rowspan="2">匈牙利公开赛</td>
+                    <td>女单</td>
+                    <td>金牌🥇</td>
+                </tr>
+                <tr align="center">
+                    <td>女双</td>
+                    <td>银牌🥈</td>
+                </tr>
+                <tr align="center">
+                    <td rowspan="2">日本公开赛</td>
+                    <td>女单</td>
+                    <td>银牌🥈</td>
+                </tr>
+                <tr align="center">
+                    <td>女双</td>
+                    <td>银牌🥈</td>
+                </tr>
+                <tr align="center">
+                    <td>奥地利公开赛</td>
+                    <td>女单</td>
+                    <td>银牌🥈</td>
+                </tr>
+                <tr align="center">
+                    <td>韩国公开赛</td>
+                    <td>女双</td>
+                    <td>银牌🥈</td>
+                </tr>
+                <tr align="center">
+                    <td rowspan="3">雅加达亚运会</td>
+                    <td>女单</td>
+                    <td>金牌🥇</td>
+                </tr>
+                <tr align="center">
+                    <td>混双</td>
+                    <td>银牌🥈</td>
+                </tr>
+                <tr align="center">
+                    <td>团体</td>
+                    <td>金牌🥇</td>
+                </tr>
+                <tr align="center">
+                    <td>乒超联赛</td>
+                    <td>团体</td>
+                    <td>金牌🥇</td>
+                </tr>
+                <tr align="center">
+                    <td>瑞典世乒赛</td>
+                    <td>团体</td>
+                    <td>金牌🥇</td>
+                </tr>
+                <tr align="center">
+                    <td>伦敦世界杯</td>
+                    <td>团体</td>
+                    <td>金牌🥇</td>
+                </tr>
+                <tr align="center">
+                    <td rowspan="2">全国锦标赛</td>
+                    <td>女单</td>
+                    <td>金牌🥇</td>
+                </tr>
+                <tr align="center">
+                    <td>混双</td>
+                    <td>银牌🥈</td>
+                </tr>
+                <tr align="center">
+                    <td rowspan="11">2017</td>
+                    <td>奥地利公开赛</td>
+                    <td>女单</td>
+                    <td>金牌🥇</td>
+                </tr>
+                <tr align="center">
+                    <td rowspan="2">卡塔尔公开赛</td>
+                    <td>女单</td>
+                    <td>银牌🥈</td>
+                </tr>
+                <tr align="center">
+                    <td>女双</td>
+                    <td>金牌🥇</td>
+                </tr>
+                <tr align="center">
+                    <td rowspan="2">澳大利亚公开赛</td>
+                    <td>女单</td>
+                    <td>银牌🥈</td>
+                </tr>
+                <tr align="center">
+                    <td>女双</td>
+                    <td>银牌🥈</td>
+                </tr>
+                <tr align="center">
+                    <td rowspan="2">亚洲乒乓球锦标赛（无锡）</td>
+                    <td>女双</td>
+                    <td>银牌🥈</td>
+                </tr>
+                <tr align="center">
+                    <td>混双</td>
+                    <td>铜牌🥉</td>
+                </tr>
+                <tr align="center">
+                    <td>天津全运会</td>
+                    <td>团体</td>
+                    <td>银牌🥈</td>
+                </tr>
+                <tr align="center">
+                    <td>乒超联赛</td>
+                    <td>团体</td>
+                    <td>铜牌🥉</td>
+                </tr>
+                <tr align="center">
+                    <td rowspan="2">全国锦标赛</td>
+                    <td>女单</td>
+                    <td>金牌🥇</td>
+                </tr>
+                <tr align="center">
+                    <td>混双</td>
+                    <td>银牌🥈</td>
+                </tr>
+    </table>
+    </body>
+    </html>

@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>林高远男双战绩</title>
+    <style>
+        .black{
+            text-decoration: none;
+            color: black;
+        }
+        body{
+            background: white;
+            margin-bottom: 50px;
+            background-image: url("./img/yuan.jpg");
+            background-repeat: no-repeat;
+            background-position: center;
+            background-attachment: fixed;
+            background-size: 100%;
+        }
+        .navbar {
+    position: absolute;
+    width: 100vm;
+    height: 100px;
+}
+.navbar input {
+/* 隐藏复选框 */
+display: none;
+}
+.navbar label {
+/* 绝对定位 */
+position: absolute;
+width: 50px;
+height: 50px;
+/* 圆角属性 */
+border-radius: 6px;
+/* 鼠标移入变小手 */
+cursor: pointer;
+transition: all 0.5s ease-out;
+}
+/* 先把label元素内的两条线定义一下 */
+.navbar label::before,
+.navbar label::after {
+content: "";
+position: absolute;
+left: 5px;
+width: 40px;
+height: 4px;
+border-radius: 4px;
+background-color: #042a41;
+transition: transform 0.3s ease-out, top 0.3s ease-out 0.3s;
+}
+.navbar label::before {
+top: calc(50% - 10px);
+}
+.navbar label::after {
+top: calc(50% + 6px);
+}
+.navbar input:checked + label::before {
+top: calc(50% - 2px);
+transform: rotate(-45deg);
+transition: top 0.3s ease-out, transform 0.3s ease-out 0.3s;
+}
+.navbar input:checked + label::after {
+top: calc(50% - 2px);
+transform: rotate(45deg);
+transition: top 0.3s ease-out, transform 0.3s ease-out 0.3s;
+}
+.navbar ul {
+position: relative;
+top: 100px;
+width: 100%;
+opacity: 0;
+transform: scaleY(0);
+transform-origin: 50% 0;
+transition: all 0.5s ease-out;
+}
+.navbar ul li {
+list-style: none;
+width: 100%;
+height: 66px;
+}
+.navbar ul li a {
+display: block;
+width: 100%;
+height: 100%;
+line-height: 66px;
+text-align: center;
+font-size: 18px;
+font-weight: 700;
+/* 取消文字下划线 */
+text-decoration: none;
+color: #042a41;
+border: 1px solid rgba(198, 217, 237, 0.3);
+transition: all 0.3s ease-out;
+}
+.navbar input:checked ~ ul {
+opacity: 1;
+transform: scaleY(1);
+}
+        .row{
+            display: grid;
+            grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+            grid-gap: 20px;
+        }
+        .content{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0px 30px;
+            height: 50px;
+            border-radius: 10px;
+            transition: 0.4s;
+        }
+        .content1{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0px 30px;
+            height: 50px;
+            border-radius: 10px;
+            transition: 0.4s;
+            color: #FFFF99;
+        }
+        .row a{
+            text-decoration: none;
+        }
+        .content:hover{
+            scale:0.97;
+            box-shadow: none;
+            background: #FFFF99;
+        }
+    </style>
+</head>
+<body>
+<table border="5"  align="center" width="600" bordercolor=#FFFF99 cellspacing="0">
+    <div class="navbar">
+        <input type="checkbox" id="nav" /><label for="nav"></label>
+        <ul>
+            <li><a href="LGY.html" >全部成绩</a></li>
+            <li><a href="LGY-MS.html" >男单成绩</a></li>
+            <li><a href="LGY-MD.html" >男双成绩</a></li>
+            <li><a href="LGY-WMD.html" >混双成绩</a></li>
+            <li><a href="LGY-ALL.html" >团体成绩</a></li>
+        </ul>
+    </div>
+        <tr align="center">
+            <td>比赛年份</td>
+            <td>比赛名称</td>
+            <td>比赛成绩</td>
+        </tr>
+        <tr align="center">
+            <td rowspan="2">2023</td>
+            <td>第26届亚洲乒乓球锦标赛</td>
+            <td>金牌🥇</td>
+        </tr>
+        <tr align="center">
+            <td>WTT球星挑战赛曼谷站</td>
+            <td>金牌🥇</td>
+        </tr>
+        <tr align="center">
+            <td rowspan="2">2022</td>
+            <td>全国乒乓球锦标赛</td>
+            <td>金牌🥇</td>
+        </tr>
+        <tr align="center">
+            <td>WTT球星挑战赛布达佩斯站</td>
+            <td>银牌🥈</td>
+        </tr>
+        <tr align="center">
+            <td rowspan="3">2021</td>
+            <td>休斯顿世乒赛</td>
+            <td>铜牌🥉</td>
+        </tr>
+        <tr align="center">
+            <td>WTT斯洛文尼亚(新梅斯托站)</td>
+            <td>金牌🥇</td>
+        </tr>
+        <tr align="center">
+            <td>WTT斯洛文尼亚(拉什科站))</td>
+            <td>金牌🥇</td>
+        </tr>
+        <tr align="center">
+            <td rowspan="2">2020</td>
+            <td>德国公开赛</td>
+            <td>银牌🥈</td>
+        </tr>
+        <tr align="center">
+            <td>全国锦标赛</td>
+            <td>银牌🥈</td>
+        </tr>
+        <tr align="center">
+            <td rowspan="7">2019</td>
+            <td>奥地利公开赛</td>
+            <td>金牌🥇</td>
+        </tr>
+        <tr align="center">
+            <td>瑞典公开赛</td>
+            <td>银牌🥈</td>
+        <tr align="center">
+            <td>亚洲乒乓球锦标赛</td>
+            <td>金牌🥇</td>
+        </tr>
+        <tr align="center">
+            <td>意大利亚公开赛</td>
+            <td>银牌🥈</td>
+        </tr>
+        <tr align="center">
+            <td>香港公开赛</td>
+            <td>金牌🥇</td>
+        </tr>
+        <tr align="center">
+            <td>布达佩斯世乒赛</td>
+            <td>铜牌🥉</td>
+        </tr>
+        <tr align="center">
+            <td>匈牙利公开赛</td>
+            <td>银牌🥈</td>
+        </tr>
+        
+        <tr align="center">
+            <td rowspan="1">2018</td>
+            <td>中国公开赛</td>
+            <td>冠军🥇</td>
+        </tr>
+    
+        <tr align="center">
+            <td rowspan="2">2017</td>
+            <td>亚洲乒乓球锦标赛</td>
+            <td>金牌🥇</td>
+        </tr>
+        <tr align="center">
+            <td>全国运动会</td>
+            <td>铜牌🥉</td>
+        </tr>
+</table>
+</body>
+</html>

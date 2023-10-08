@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300|Sacramento" rel="stylesheet">
+    <title>圆满</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: rgb(255, 249, 225); 
+            font-family: 'Sacramento';
+            font-size: 20px;
+			background-size: 100%;
+        }
+        .navbar {
+	    position: absolute;
+		width: 100vm;
+		height: 100px;
+	}
+.navbar input {
+	/* 隐藏复选框 */
+	display: none;
+}
+.navbar label {
+	/* 绝对定位 */
+	position: absolute;
+	width: 50px;
+	height: 50px;
+	/* 圆角属性 */
+	border-radius: 6px;
+	/* 鼠标移入变小手 */
+	cursor: pointer;
+	transition: all 0.5s ease-out;
+}
+/* 先把label元素内的两条线定义一下 */
+.navbar label::before,
+.navbar label::after {
+	content: "";
+	position: absolute;
+	left: 5px;
+	width: 40px;
+	height: 4px;
+	border-radius: 4px;
+	background-color: #042a41;
+	transition: transform 0.3s ease-out, top 0.3s ease-out 0.3s;
+}
+.navbar label::before {
+	top: calc(50% - 10px);
+}
+.navbar label::after {
+	top: calc(50% + 6px);
+}
+.navbar input:checked + label::before {
+	top: calc(50% - 2px);
+	transform: rotate(-45deg);
+	transition: top 0.3s ease-out, transform 0.3s ease-out 0.3s;
+}
+.navbar input:checked + label::after {
+	top: calc(50% - 2px);
+	transform: rotate(45deg);
+	transition: top 0.3s ease-out, transform 0.3s ease-out 0.3s;
+}
+.navbar ul {
+	position: relative;
+	top: 100px;
+	width: 100%;
+	opacity: 0;
+	transform: scaleY(0);
+	transform-origin: 50% 0;
+	transition: all 0.5s ease-out;
+}
+.navbar ul li {
+	list-style: none;
+	width: 100%;
+	height: 66px;
+}
+.navbar ul li a {
+	display: block;
+	width: 100%;
+	height: 100%;
+	line-height: 66px;
+	text-align: center;
+	font-size: 18px;
+	font-weight: 700;
+	/* 取消文字下划线 */
+	text-decoration: none;
+	color: #042a41;
+	border: 1px solid rgba(198, 217, 237, 0.3);
+	transition: all 0.3s ease-out;
+}
+.navbar input:checked ~ ul {
+	opacity: 1;
+	transform: scaleY(1);
+}
+        header{
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: flex;
+            justify-content: center;
+        }
+		.img {
+            max-width: 100%;
+        }
+        .title{
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: flex;
+            justify-content: center;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <input type="checkbox" id="nav" /><label for="nav"></label>
+        <ul>
+            <li><a href="PP.HTML">🏓圆满混双</a></li>
+            <li><a href="WMY.HTML">🐟王曼昱战绩</a></li>
+            <li><a href="LGY.HTML">🐰林高远战绩</a></li>
+            <li><a href="SWEET.HTML">💞圆满宇宙</a></li>
+        </ul>
+    </div>
+    <header>
+        <img src="./img/ym-bg.jpg" alt="" class="img">
+    </header>
+    <div class="title">
+            <h1>YuanMan</h1>
+        </a>  
+    </div>
+</body>
+</html>
