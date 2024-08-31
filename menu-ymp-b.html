@@ -1,0 +1,1095 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> 
+    <title>圆满河粉摊探店博主</title>
+    <link rel="icon" href="./img/ym-sweet.jpg" type="image/x-icon">
+    <style>
+        .bodyDiv{
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            scrollbar-width: none; 
+        }
+        #backToTop {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: none;
+    cursor: pointer;
+    background-color: rgba(0,0,128, 0);
+    border: 0px;
+    font-size: 20px;
+}
+.bodyDiv--container::-webkit-scrollbar {
+    display: none;
+}
+/* 同人文 */
+.econtainer {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+/* LOFTER */
+.econtentboxL {
+    width: 300px;
+    height: 150px;
+    margin: 20px;
+    position: relative;
+    display: inline-block;
+    box-shadow: 5px 5px 10px 0px lightgray;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+.econtentboxL h2 {
+    color: black;
+    margin: 20px;
+    font-size: medium;
+}
+.econtentboxL p {
+    color: black;
+    margin: 5px;
+    padding: 5px;
+}
+.econtentboxL h2::after {
+    content: '';
+    background: rgb(22,218,209);
+    width: 200px;
+    height: 4px;
+    position: absolute;
+    left: 5%;
+    bottom: 90px;
+}
+.econtentboxL:hover {
+    scale: 0.97;
+    box-shadow: none;
+} 
+/* ao3 */
+.econtentboxa {
+    width: 300px;
+    height: 150px;
+    margin: 20px;
+    position: relative;
+    display: inline-block;
+    box-shadow: 5px 5px 10px 0px lightgray;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+.econtentboxa h2 {
+    color: black;
+    margin: 20px;
+    font-size: medium;
+}
+.econtentboxa p {
+    color: black;
+    margin: 5px;
+    padding: 5px;
+}
+.econtentboxa h2::after {
+    content: '';
+    background: rgb(110,0,0);
+    width: 200px;
+    height: 4px;
+    position: absolute;
+    left: 5%;
+    bottom: 90px;
+}
+.econtentboxa:hover {
+    scale: 0.97;
+    box-shadow: none;
+} 
+/* B站 */
+.econtentboxb {
+    width: 300px;
+    height: 150px;
+    margin: 20px;
+    position: relative;
+    display: inline-block;
+    box-shadow: 5px 5px 10px 0px lightgray;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+.econtentboxb h2 {
+    color: black;
+    margin: 20px;
+    font-size: medium;
+}
+.econtentboxb p {
+    color: black;
+    margin: 5px;
+    padding: 5px;
+}
+.econtentboxb h2::after {
+    content: '';
+    background: rgb(255,106,155);
+    width: 200px;
+    height: 4px;
+    position: absolute;
+    left: 5%;
+    bottom: 90px;
+}
+.econtentboxb:hover {
+    scale: 0.97;
+    box-shadow: none;
+} 
+
+/*豆瓣*/
+.econtentboxd{
+    width: 300px;
+    height: 150px;
+    margin: 20px;
+    position: relative;
+    display: inline-block;
+    box-shadow: 5px 5px 10px 0px lightgray;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+.econtentboxd h2 {
+    color: black;
+    margin: 20px;
+    font-size: medium;
+}
+.econtentboxd p {
+    color: black;
+    margin: 5px;
+    padding: 5px;
+}
+.econtentboxd h2::after {
+    content: '';
+    background: rgb(7,181,17);
+    width: 200px;
+    height: 4px;
+    position: absolute;
+    left: 5%;
+    bottom: 90px;
+}
+.econtentboxd:hover {
+    scale: 0.97;
+    box-shadow: none;
+} 
+
+/*微博*/
+.econtentboxw{
+    width: 300px;
+    height: 150px;
+    margin: 20px;
+    position: relative;
+    display: inline-block;
+    box-shadow: 5px 5px 10px 0px lightgray;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+.econtentboxw h2 {
+    color: black;
+    margin: 20px;
+    font-size: medium;
+}
+.econtentboxw p {
+    color: black;
+    margin: 5px;
+    padding: 5px;
+}
+.econtentboxw h2::after {
+    content: '';
+    background: rgb(213,44,43);
+    width: 200px;
+    height: 4px;
+    position: absolute;
+    left: 5%;
+    bottom: 90px;
+}
+.econtentboxw:hover {
+    scale: 0.97;
+    box-shadow: none;
+} 
+
+/* 播放器 */
+        .musicbody {
+    display: flex;
+    float: right;
+}
+.music{
+    display: flex;
+    flex-direction: column;
+}
+.Mbtns div {
+    display: flex;
+    color:rgb(110,0,0);
+    cursor: pointer;
+    margin-right: 5px;
+}
+.Mbtns div:active,
+.Mbtns div.active
+    {
+    color: rgb(110,0,0);
+}
+.Mbtns .playPause {
+    height: 20px;
+    width: 20px;
+}
+.Mbtns .material-icons {
+    font-size: 20px;
+}
+.Mbtns .playPause span {
+    font-size: 20px;
+}
+.menu-title {
+    text-align: center;
+    margin-bottom: 10px;
+    font-family:ZhuZi GuDian,Times New Roman,Times,serif;
+    color: black;
+}
+.sy{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+}
+.sy img{
+    width: 100px;
+    height: auto;
+}
+@font-face {
+        font-family: 'ZhuZi GuDian';
+        src: url("./fonts/FZFW_ZhuZiGuDian_MP_Regular.subset.woff2")
+        format("woff2");
+        font-weight: 400;
+        font-display: swap;
+    }
+
+a{
+    text-decoration: none; /* 移除下划线等装饰 */
+    color: inherit; /* 文字颜色继承父元素 */
+    background: transparent; /* 背景透明 */
+    border: none; /* 无边框 */
+    padding: 0; /* 无内边距 */
+    margin: 0; /* 无外边距 */
+}
+.horizontal-text {
+    display: inline-flex;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.horizontal-text > span {
+    white-space: nowrap;
+    margin: 10px;
+    font-family:ZhuZi GuDian,Times New Roman,Times,serif;
+    color: pink
+}
+    </style>
+</head>
+<body>
+    <div class="bodyDiv">
+        <center>
+            <div class="menu-title">
+                <h2>圆满河粉摊探店博主（同人文篇）
+                    <div class="musicbody">
+                        <div class="music">
+                            <audio src="" ></audio>
+                            <div class="Mbtns">
+                                <div class="playPause active">
+                                    <span class="material-icons">
+                                        pause
+                                        </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </h2>
+                <h3>点击文字跳转</h3>
+            </div>
+            <div class="horizontal-text">
+                <span><a href="#lw">联文</a></span>
+                <span><a href="#trw">同人文</a></span>
+                <span><a href="#ltt">论坛体</a></span>
+                <span><a href="#jsj">捡手机</a></span>
+                <span><a href="#zht">知乎体</a></span>
+            </div>
+        </center>
+        <div class="veDiv">
+            <div class="Content">
+                <!-- 联文 -->
+                <div class="econtainer" id="lw">
+                    <a href="https://vickylieu.lofter.com/post/1eb0062f_2b6528c83" target="_blank">
+                        <div class="econtentboxL">
+                            <h2>【荔枝香近】</h2>
+                            <p>【荔枝香近】圆圆满满七夕活动汇总</p>
+                        </div>
+                    </a>
+                    <a href="https://shuyuhuaciyang.lofter.com/post/30ac2881_2b80bd70e" target="_blank">
+                        <div class="econtentboxL">
+                            <h2>【春日宴】</h2>
+                            <p>【春日宴】春节联文/画汇总</p>
+                        </div>
+                    </a>
+                    <a href="https://liusanqian37103.lofter.com/post/4cd44fad_2bac17832" target="_blank">
+                        <div class="econtentboxL" >
+                            <h2>【时光飞碟】</h2>
+                            <p>【圆满】时光飞碟联文集锦｜𝓜𝓮𝓻𝓻𝔂 𝓒𝓱𝓻𝓲𝓼𝓽𝓶𝓪𝓼</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="econtainer" id="trw">
+                    <a href="https://bk.jdkg.fun/works/45770737/chapters/115182187" target="_blank">
+                        <div class="econtentboxa">
+                            <h2>几分月（Olivaceous54）</h2>
+                            <p>做炮友，不能太心软的。</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="econtainer">
+                    <a href="https://bk.jdkg.fun/works/44732083/chapters/112545433" target="_blank">
+                        <div class="econtentboxa">
+                            <h2>灰色泡沫（吉拉耳）</h2>
+                            <p>背德，各有家室预警</p>
+                            <p>祝愿现实中的二位前途似锦平安喜乐</p>
+                        </div>
+                    </a>
+                    <a href="https://bk.jdkg.fun/works/49242052/chapters/124251130" target="_blank">
+                        <div class="econtentboxa">
+                            <h2>旋转门</h2>
+                            <p>＊现pa，设计师x视频博主</p>
+                            <p>＊ooc与情节雷齐飞，与真人无涉（手动高亮）</p>
+                            <p>在水里捞月亮的时候，能不能看见西西弗斯在推石头？</p>
+                        </div>
+                    </a>
+                    <a href="https://bk.jdkg.fun/works/56598223/chapters/143855392" target="_blank">
+                        <div class="econtentboxa">
+                            <h2>浮磁游记</h2>
+                            <p>命定无形，相吸相斥。</p>
+                            <p>*民航paro，机长·林 x 管制·王，与现实世界无关（高亮）</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="econtainer">
+                    <a href="https://bk.jdkg.fun/works/50878480/chapters/128532763" target="_blank">
+                        <div class="econtentboxa">
+                            <h2>歧途万千</h2>
+                            <p>剧情混乱、道德缺失、更新很慢，慎入。</p>
+                            <p>同人只是顶着名字的平行时空，冷静。</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="econtainer">
+                    <a href="https://bk.jdkg.fun/works/41053053/chapters/102893130" target="_blank">
+                        <div class="econtentboxa">
+                            <h2>漩涡（chninnm）</h2>
+                            <p>没有好人全员犯罪。</p>
+                        </div>
+                    </a>
+                    <a href="https://bk.jdkg.fun/works/52691218" target="_blank">
+                        <div class="econtentboxa">
+                            <h2>山雀（chninnm）</h2>
+                            <p>无论如何，我们要年年岁岁都见。</P>
+                        </div>
+                    </a>
+                    <a href="https://bk.jdkg.fun/works/41479296" target="_blank">
+                        <div class="econtentboxa">
+                            <h2>Heroism.英雄主义（chninnm）</h2>
+                            <p>无关主动不主动，你有我就歌颂。</p>
+                        </div>
+                    </a>
+                    <a href="https://bk.jdkg.fun/works/41051796" target="_blank">
+                        <div class="econtentboxa">
+                            <h2>Unnamed Coast / 不具名海岸</h2>
+                            <p>她每次都想，明天一定修剪。</p>
+                            <p>可是明日复明日，海边原本就种不出什么好花来。</p>
+                        </div>
+                    </a>
+                    <a href="https://bk.jdkg.fun/works/41052354" target="_blank">
+                        <div class="econtentboxa">
+                            <h2>Mariage d'Amour /梦中的婚礼</h2>
+                            <p>那时候王曼昱总问他，要是真踩上去，能走到太阳里吗？</p>
+                            <p>太阳多好啊，金灿灿黄澄澄的，像个巨大的金牌。</p>
+                        </div>
+                    </a>
+                    <a href="https://bk.jdkg.fun/works/41052708" target="_blank">
+                        <div class="econtentboxa">
+                            <h2>No turning back / 交换余生</h2>
+                            <p>人的一生要经历多少次这样的历程。</p>
+                            <p>登陆一个久未访问的网站却想不起密码。点击忘记密码，根据要求重新设置，又提示与原密码一致。</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="econtainer">
+                    <a href="https://www.douban.com/people/156199955/status/3691385467/?_i=249294850d8bab0" target="_blank">
+                        <div class="econtentboxd">
+                            <h2>到此为止（上）（BadgalJojo）</h2>
+                            <p>到此为止</p>
+                        </div>
+                    </a>
+                    <a href="https://www.douban.com/people/156199955/status/3696115853/?_i=249294850d8bab0" target="_blank">
+                        <div class="econtentboxd">
+                            <h2>到此为止（中）（BadgalJojo）</h2>
+                            <p>到此为止</p>
+                        </div>
+                    </a>
+                    <a href="https://www.douban.com/people/156199955/status/3706795514/?_i=249294850d8bab0" target="_blank">
+                        <div class="econtentboxd">
+                            <h2>到此为止（下）（BadgalJojo）</h2>
+                            <p>到此为止</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="econtainer">
+                    <a href="https://simpsondetamama.lofter.com/post/31859506_2b3e2fcc2" target="_blank">
+                        <div class="econtentboxL">
+                            <h2>小满手记（辛塔_simta）</h2>
+                            <p>*关于林小满的一些早期人类幼崽实录</p>
+                            <p>*爹妈依旧是在役运动员设定</p>
+                        </div>
+                    </a>
+                    <a href="https://simpsondetamama.lofter.com/post/31859506_2b5373e10" target="_blank">
+                        <div class="econtentboxL">
+                            <h2>今天也不喜欢你（辛塔_simta）</h2>
+                            <p>*小（xp踩雷 及时退出 </p>
+                            <p>*Brat顽皮小猫 出击！</p>
+                            <p>*pwp/ooc</p>
+                        </div>
+                    </a>
+                    <a href="https://simpsondetamama.lofter.com/post/31859506_2b8f6fc57" target="_blank">
+                        <div class="econtentboxL">
+                            <h2>趣多多星球（辛塔_simta）</h2>
+                            <p>*五月好运 比赛顺利</p>
+                            <p>*复健一点可爱小朋友</p>
+                        </div>
+                    </a>
+                    <a href="https://simpsondetamama.lofter.com/post/31859506_2b4822f17" target="_blank">
+                        <div class="econtentboxL">
+                            <h2>撷璎（辛塔_simta）</h2>
+                            <p>世界几多不碎，揭起瓦砾在我面前是你。</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="econtainer">
+                    <a href="https://jinhou740.lofter.com/post/1e4ca8e1_1cd21a24e" target="_blank">
+                        <div class="econtentboxL">
+                            <h2>公园与无眠夜（Serein'ss）</h2>
+                            <p>＊一个标题首字母梗</p>
+                            <p>＊无厘头暗恋</p>
+                            <p>我的心若能效仿那风，必将对它盛情款待 </p>
+                        </div>
+                    </a>
+                    <a href="https://jinhou740.lofter.com/post/1e4ca8e1_2b44edb0c" target="_blank">
+                        <div class="econtentboxL">
+                            <h2>氯雷他定（Serein'ss）</h2>
+                            <p>＊久违的暗恋文学</p>
+                            <p>＊伪现背的极致ooc</p>
+                        </div>
+                    </a>
+                    <a href="https://jinhou740.lofter.com/post/1e4ca8e1_2b4720473" target="_blank">
+                        <div class="econtentboxL">
+                            <h2>假如一个人（Serein'ss）</h2>
+                            <p>＊婚前生活短打</p>
+                            <p>＊关于小情侣的清单</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="econtainer">
+                    <a href="https://bk.jdkg.fun/works/50498398/chapters/127575883" target="_blank">
+                        <div class="econtentboxa">
+                            <h2>【圆满】雾凇堕火（DanRuCi7）</h2>
+                            <p>"这个世界的悲惨和伟大：不给我们任何真相，但有许多爱。荒谬当道，爱拯救之。" </p>
+                        </div>
+                    </a>
+                    <a href="https://bk.jdkg.fun/works/46618729" target="_blank">
+                        <div class="econtentboxa">
+                            <h2>【圆满】美丽之物（DanRuCi7）</h2>
+                            <p>“他离开是不可能的，她想分开也不行，至少今天不可以，至少今天他和她之间不可以有任何人。”</p>
+                        </div>
+                    </a>
+                    <a href="https://bk.jdkg.fun/works/52160440" target="_blank">
+                        <div class="econtentboxa">
+                            <h2>【圆满】焚饲玉兰（DanRuCi7）</h2>
+                            <p>“她一直都在思念他，或者说一直都在想如何勾引他。” </p>
+                            <p>ABO AU的pwp，重逢后的易感期故事。</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="econtainer">
+                    <a href="https://bk.jdkg.fun/works/39806721/chapters/99661956" target="_blank">
+                        <div class="econtentboxa">
+                            <h2>春风记事（桔梗：））</h2>
+                            <p>AU|破镜重圆</p>
+                            <p>杀手X军火贩子</p>
+                        </div>
+                    </a>
+                    <a href="https://bk.jdkg.fun/works/40210761/chapters/100714920" target="_blank">
+                        <div class="econtentboxa">
+                            <h2>有票吗（桔梗：））</h2>
+                            <p>爱欲如丝，人在其中，作茧自缚</p>
+                        </div>
+                    </a>
+                    <a href="https://bk.jdkg.fun/works/43273098" target="_blank">
+                        <div class="econtentboxa">
+                            <h2>圆（桔梗：））</h2>
+                            <p>伪现背 2022时间线</p>
+                        </div>
+                    </a>
+                    <a href="https://bk.jdkg.fun/works/39812718?view_adult=true" target="_blank">
+                        <div class="econtentboxa">
+                            <h2>谈情不说爱（桔梗：））</h2>
+                            <p>伪现背 炮友关系 angry sex</p>
+                        </div>
+                    </a>
+                    <a href="https://bk.jdkg.fun/works/39812745" target="_blank">
+                        <div class="econtentboxa">
+                            <h2>同床异梦（桔梗：））</h2>
+                            <p>abo｜发情期接着易感期｜伪be</p>
+                            <p>婚后｜很闷｜私设多｜慎入</p>
+                        </div>
+                    </a>
+                    <a href="https://bk.jdkg.fun/works/56733151/chapters/144224200" target="_blank">
+                        <div class="econtentboxa">
+                            <h2>粤食记（桔梗：））</h2>
+                            <p>养父女关系</p>
+                        </div>
+                    </a>
+                    <a href="https://bk.jdkg.fun/works/39813372/chapters/99676590" target="_blank">
+                        <div class="econtentboxa">
+                            <h2>日常碎片（桔梗：））</h2>
+                            <p>养父女 日常碎片 都很短</p>
+                        </div>
+                    </a>
+                    <a href="https://bk.jdkg.fun/works/39813414/chapters/99676767" target="_blank">
+                        <div class="econtentboxa">
+                            <h2>短文集（桔梗：））</h2>
+                            <p>啥都有 唯一共同点——短</p>
+                        </div>
+                    </a>
+                    <a href="https://bk.jdkg.fun/works/39859089/chapters/99798795" target="_blank">
+                        <div class="econtentboxa">
+                            <h2>山风（桔梗：））</h2>
+                            <p>叔侄女关系|青春叛逆期</p>
+                        </div>
+                    </a>
+                    <a href="https://bk.jdkg.fun/works/44525359/chapters/111994531" target="_blank">
+                        <div class="econtentboxa">
+                            <h2>分寸（桔梗：））</h2>
+                            <p>在超市购物的王曼昱撞到了一个人，等她起身，眼前出现了林高远的笑容。</p>
+                            <p>一些久别重逢，炮友转正的狗血要素堆砌。。</p>
+                        </div>
+                    </a>
+                    <a href="https://bk.jdkg.fun/works/40790715" target="_blank">
+                        <div class="econtentboxa">
+                            <h2>在日落和日出之间（桔梗：））</h2>
+                            <p>【荔枝香近｜17:00】</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="econtainer">
+                    <a href="https://bk.jdkg.fun/works/54561445/chapters/138245140" target="_blank">
+                        <div class="econtentboxa">
+                            <h2>广夏细旃（Holate）</h2>
+                            <p>ABO|广夏大酒店</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="econtainer">
+                    <a href="https://bk.jdkg.fun/works/58095634" target="_blank">
+                        <div class="econtentboxa">
+                            <h2>万物皆蓝（Liuliudashun）</h2>
+                            <p>有原创人物</p>
+                        </div>
+                    </a>
+                    <a href="https://bk.jdkg.fun/works/58095457" target="_blank">
+                        <div class="econtentboxa">
+                            <h2>春夏复沓（Liuliudashun）</h2>
+                            <p>现背泡友转正</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="econtainer">
+                    <a href="https://bk.jdkg.fun/works/42918720/chapters/107825268" target="_blank">
+                        <div class="econtentboxa">
+                            <h2>戒（bookwormk111）</h2>
+                            <p>戒系列三部曲：错戒-破戒-昏戒</p>
+                        </div>
+                    </a>
+                    <a href="https://bk.jdkg.fun/works/47061520/chapters/118563370" target="_blank">
+                        <div class="econtentboxa">
+                            <h2>怀璧（bookwormk111）</h2>
+                            <p>一个普普通通的小妈文学。</p>
+                        </div>
+                    </a>
+                    <a href="https://bk.jdkg.fun/works/43140528" target="_blank">
+                        <div class="econtentboxa">
+                            <h2>参商（bookwormk111）</h2>
+                            <p>参商</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="econtainer">
+                    <a href="https://bk.jdkg.fun/works/54129076/chapters/137050438" target="_blank">
+                        <div class="econtentboxa">
+                            <h2>致我（试剂）</h2>
+                            <p>crush作为名词，还有一层意思，就是“短暂地、热烈地但又无法说出的爱意”。</p>
+                            <p>*办公室恋情，各有故事</p>
+                        </div>
+                    </a>
+                    <a href="https://bk.jdkg.fun/works/56458333/chapters/143467024" target="_blank">
+                        <div class="econtentboxa">
+                            <h2>狼狈（试剂）</h2>
+                            <p>破镜</p>
+                        </div>
+                    </a>
+                </div>
+                <!-- B站 -->
+                <div class="econtainer">
+                    <a href="https://www.bilibili.com/read/readlist/rl552895?spm_id_from=333.1369.opus.module_collection.click" target="_blank">
+                        <div class="econtentboxb">
+                            <h2>爱是无条件（别惹我852）</h2>
+                            <p>我曾把你交还给命运，但命运终究将你还给了我。</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="econtainer">
+                    <a href="https://bk.jdkg.fun/works/52992391/chapters/134057785" target="_blank">
+                        <div class="econtentboxa">
+                            <h2>世界停电也要相爱（todaysaqkong）</h2>
+                            <p>适合通勤和碎片时间读一读放松心情～</p>
+                            <p>世界纷纷扰扰，你可以来圆满怀里躲一躲～</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="econtainer">
+                    <a href="https://bk.jdkg.fun/works/37186324/chapters/92773882" target="_blank">
+                        <div class="econtentboxa">
+                            <h2>不摇滚（VinegarT）</h2>
+                            <p>娱乐圈AU 节目编导鱼×爱豆转型演员远</p>
+                            <p>“得亏她没学过表演，才让他深刻意识到有些东西在记忆里已经轻到可以被随意提起。”</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="econtainer">
+                    <a href="https://bk.jdkg.fun/works/54149095/chapters/137104396" target="_blank">
+                        <div class="econtentboxa">
+                            <h2>密友（limejuice991）</h2>
+                            <p>没有文学，全是色情。</p>
+                            <p>ooc</p>
+                        </div>
+                    </a>
+                    <a href="https://bk.jdkg.fun/works/54152521?view_adult=true" target="_blank">
+                        <div class="econtentboxa">
+                            <h2>前女友回国后（limejuice991）</h2>
+                            <p>ooc</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="econtainer">
+                    <a href="https://shuyuhuaciyang.lofter.com/post/30ac2881_2b3f39a89" target="_blank">
+                        <div class="econtentboxL">
+                            <h2>少女的祈祷（飞花满江树）</h2>
+                            <p>于是她的月亮不再有缺。 </p>
+                        </div>
+                    </a>
+                    <a href="https://shuyuhuaciyang.lofter.com/post/30ac2881_2ba57b7bb" target="_blank">
+                        <div class="econtentboxL">
+                            <h2>远曼｜男孩十八岁（飞花满江树）</h2>
+                            <p>他们的人生如同盘根错节的长松，互相交织难舍难分。</p>
+                        </div>
+                    </a>
+                    <a href="https://shuyuhuaciyang.lofter.com/post/30ac2881_2ba832f53" target="_blank">
+                        <div class="econtentboxL">
+                            <h2>如果巴黎不下雪（飞花满江树）</h2>
+                            <p>那他们就走到有雪的地方去。</p>
+                        </div>
+                    </a>
+                    <a href="https://shuyuhuaciyang.lofter.com/post/30ac2881_2b41abb26" target="_blank">
+                        <div class="econtentboxL">
+                            <h2>圆（飞花满江树）</h2>
+                            <p>双视角｜破镜重圆｜有点苦｜圆满</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="econtainer">
+                    <a href="https://bk.jdkg.fun/works/46190308/chapters/116284105" target="_blank">
+                        <div class="econtentboxa">
+                            <h2>失忆蝴蝶</h2>
+                            <p>红尘往事，破镜重圆</p>
+                            <p>娱乐圈AU</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="econtainer">
+                    <a href="https://bk.jdkg.fun/works/41000076/chapters/102751959" target="_blank">
+                        <div class="econtentboxa">
+                            <h2>少女之役（VeronicaSeven）</h2>
+                            <p>她的人生在后来经历了好多好多次战争，但她知道其中有一场永远也不会有输赢。</p>
+                            <p>因为那一场永远都是现在进行时。</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="econtainer">
+                    <a href="https://bk.jdkg.fun/works/53522050/chapters/135472975" target="_blank">
+                        <div class="econtentboxa">
+                            <h2>【圆满】袒护（boomboim）</h2>
+                            <p>伪兄妹</p>
+                        </div>
+                    </a>
+                    <a href="https://bk.jdkg.fun/works/53513479/chapters/135451651" target="_blank">
+                        <div class="econtentboxa">
+                            <h2>【圆满】地锁与水鸟（boomboim）</h2>
+                            <p>背德男女</p>
+                            <p>国外背景</p>
+                            <p>拉力赛车手哥x心理咨询师姐</p>
+                        </div>
+                    </a>
+                    <a href="https://bk.jdkg.fun/works/53513815" target="_blank">
+                        <div class="econtentboxa">
+                            <h2>【圆满】春水决堤（boomboim）</h2>
+                            <p>先婚后爱短篇完结</p>
+                            <p>王大记者x林大选手</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="econtainer">
+                    <a href="https://bk.jdkg.fun/works/34517356" target="_blank">
+                        <div class="econtentboxa">
+                            <h2>【远曼】瘾（Jiiiiiii）</h2>
+                            <p>ABO，🍃x冰酒</p>
+                        </div>
+                    </a>
+                    <a href="https://bk.jdkg.fun/works/34708429" target="_blank">
+                        <div class="econtentboxa">
+                            <h2>【远曼】瘾·续（Jiiiiiii）</h2>
+                            <p>ABO，🍃x冰酒</p>
+                        </div>
+                    </a>
+                    <a href="https://bk.jdkg.fun/works/34149961/chapters/84968743" target="_blank">
+                        <div class="econtentboxa">
+                            <h2>【远曼】无望永恒（Jiiiiiii）</h2>
+                            <p>乒乓球是圆的，他与她背道而驰，亦是在向她而去。</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="econtainer">
+                    <a href="https://milu7551.lofter.com/post/1fea8908_1ccbd3425" target="_blank">
+                        <div class="econtentboxL">
+                            <h2>东京未完成（上）（十四街）</h2>
+                            <p>*林高远视角</p>
+                            <p>*时间是TOKYO 2020(2021)女团决赛后</p>
+                        </div>
+                    </a>
+                    <a href="https://milu7551.lofter.com/post/1fea8908_1cd3161ba?incantation=rzk0JTwEkbK6" target="_blank">
+                        <div class="econtentboxL">
+                            <h2>东京未完成（下）（十四街）</h2>
+                            <p>*曼昱视角</p>
+                            <p>*涨球第一</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="econtainer">
+                    <a href="https://1301693998.lofter.com/post/1ddc8c9b_2b5c0438e?incantation=rzZGCGDNuOT4" target="_blank">
+                        <div class="econtentboxL">
+                            <h2>【圆满】阶段爱情（上）（Genius）</h2>
+                            <p>突发奇想的先婚</p>
+                        </div>
+                    </a>
+                    <a href="https://1301693998.lofter.com/post/1ddc8c9b_2b6c387e7?incantation=rzzciWa8nzrd" target="_blank">
+                        <div class="econtentboxL">
+                            <h2>【圆满】阶段爱情（中）（Genius）</h2>
+                            <p>讲一声冻冻</p>
+                        </div>
+                    </a>
+                    <a href="https://1301693998.lofter.com/post/1ddc8c9b_2b766b1d7?incantation=rzgkbJzhO4p0" target="_blank">
+                        <div class="econtentboxL">
+                            <h2>【圆满】阶段爱情（下）（Genius）</h2>
+                            <p>总有你给我光 给我火 </p>
+                        </div>
+                    </a>
+                    <a href="https://1301693998.lofter.com/post/1ddc8c9b_2b4d584da?incantation=rzzrbgFu79jV" target="_blank">
+                        <div class="econtentboxL">
+                            <h2>【圆满丨pwp】七秒（Genius）</h2>
+                            <p>在他身边时，所有不好的记忆都只会存在七秒 </p>
+                        </div>
+                    </a>
+                    <a href="https://1301693998.lofter.com/post/1ddc8c9b_2b4d80f4c?incantation=rzdNvXL2uIqB" target="_blank">
+                        <div class="econtentboxL">
+                            <h2>【圆满】夜市手记（Genius）</h2>
+                            <p>炒河粉的小两口，全文2k+</p>
+                            <p>幸福和快乐是结局</p>
+                        </div>
+                    </a>
+                </div>
+                <!-- 论坛体 -->
+                <div class="econtainer" id="ltt">
+                        <a href="https://www.douban.com/people/203800910/status/4417812688/?_i=249495850d8bab0" target="_blank">
+                            <div class="econtentboxd">
+                                <h2>万圣节礼物（miu囡囡）</h2>
+                                <p>论坛体</p>
+                            </div>
+                        </a>
+                        <a href="https://www.douban.com/people/203800910/status/4375183949/?_i=249500340d8bab0" target="_blank">
+                            <div class="econtentboxd">
+                                <h2>浅吃一口（miu囡囡）</h2>
+                                <p>论坛体</p>
+                            </div>
+                        </a>
+                        <a href="https://www.douban.com/people/203800910/status/4322363543/?_i=249500840d8bab0" target="_blank">
+                            <div class="econtentboxd">
+                                <h2>当我的cp是一对显眼包的时候（miu囡囡）</h2>
+                                <p>论坛体</p>
+                            </div>
+                        </a>
+                    <a href="https://www.douban.com/people/203800910/status/4298888252/?_i=249501330d8bab0" target="_blank">
+                        <div class="econtentboxd">
+                            <h2>世锦赛直播咯（miu囡囡）</h2>
+                            <p>解说竟是你</p>
+                        </div>
+                    </a>
+                    <a href="https://www.douban.com/people/203800910/status/4272070727/?_i=249502120d8bab0" target="_blank">
+                        <div class="econtentboxd">
+                            <h2>瞧瞧是谁家的产品呀（miu囡囡）</h2>
+                            <p>论坛体</p>
+                        </div>
+                    </a>
+                    <a href="https://www.douban.com/people/203800910/status/4245586294/?_i=249502430d8bab0" target="_blank">
+                        <div class="econtentboxd">
+                            <h2>跑火车的小气cp（miu囡囡）</h2>
+                            <p>论坛体</p>
+                        </div>
+                    </a>
+                <a href="https://www.douban.com/people/203800910/status/4221460136/?_i=249502790d8bab0" target="_blank">
+                    <div class="econtentboxd">
+                        <h2>你说啥就是啥吧（miu囡囡）</h2>
+                        <p>论坛体</p>
+                    </div>
+                </a>
+                <a href="https://www.douban.com/people/203800910/status/4206328037/?_i=249503090d8bab0" target="_blank">
+                    <div class="econtentboxd">
+                        <h2>瓜田里的猹就是我自己（miu囡囡）</h2>
+                        <p>论坛体</p>
+                    </div>
+                </a>
+                <a href="https://www.douban.com/people/203800910/status/4194897383/?_i=249503390d8bab0" target="_blank">
+                    <div class="econtentboxd">
+                        <h2>那些你很冒险的梦（miu囡囡）</h2>
+                        <p>论坛体</p>
+                    </div>
+                </a>
+                <a href="https://www.douban.com/people/203800910/status/4578887674/?_i=249487980d8bab0" target="_blank">
+                    <div class="econtentboxd">
+                        <h2>地瓜日常（miu囡囡）</h2>
+                        <p>论坛体</p>
+                    </div>
+                </a>
+                    <a href="https://www.douban.com/people/203800910/status/3777152704/?_i=249489920d8bab0" target="_blank">
+                        <div class="econtentboxd">
+                            <h2>论坛体（miu囡囡）</h2>
+                            <p>论坛体</p>
+                        </div>
+                    </a>
+                    <a href="https://www.douban.com/people/203800910/status/3822059933/?_i=249489920d8bab0" target="_blank">
+                        <div class="econtentboxd">
+                            <h2>生日快乐（miu囡囡）</h2>
+                            <p>论坛体</p>
+                        </div>
+                    </a>
+                    <a href="https://www.douban.com/people/203800910/status/3829307468/?_i=249489920d8bab0" target="_blank">
+                        <div class="econtentboxd">
+                            <h2>奇奇怪怪的直播（miu囡囡）</h2>
+                            <p>论坛体</p>
+                        </div>
+                    </a>
+                    <a href="https://www.douban.com/people/203800910/status/3876524605/?_i=249493940d8bab0" target="_blank">
+                        <div class="econtentboxd">
+                            <h2>吵架吵来的官宣（miu囡囡）</h2>
+                            <p>论坛体</p>
+                        </div>
+                    </a>
+                    <a href="https://www.douban.com/people/203800910/status/4062442924/?_i=249505280d8bab0" target="_blank">
+                        <div class="econtentboxd">
+                            <h2>老兔子，两幅面孔啊（miu囡囡）</h2>
+                            <p>论坛体</p>
+                        </div>
+                    </a>
+                    <a href="https://www.douban.com/people/203800910/status/4125836851/?_i=249505090d8bab0" target="_blank">
+                        <div class="econtentboxd">
+                            <h2>粤男直播（miu囡囡）</h2>
+                            <p>论坛体</p>
+                        </div>
+                    </a>
+                    <a href="https://www.douban.com/people/203800910/status/4146157592/?_i=249504100d8bab0" target="_blank">
+                        <div class="econtentboxd">
+                            <h2>不是白痴，是大白齿啦（miu囡囡）</h2>
+                            <p>论坛体</p>
+                        </div>
+                    </a>
+                    <a href="https://www.douban.com/people/203800910/status/4163525513/?_i=249503950d8bab0" target="_blank">
+                        <div class="econtentboxd">
+                            <h2>你很烦欸～（miu囡囡）</h2>
+                            <p>论坛体</p>
+                        </div>
+                    </a>
+                    <a href="https://www.douban.com/people/203800910/status/4176667505/?_i=249503680d8bab0" target="_blank">
+                        <div class="econtentboxd">
+                            <h2>解释啥呀（miu囡囡）</h2>
+                            <p>论坛体</p>
+                        </div>
+                    </a>
+                </div> 
+                <!-- 捡手机 -->
+                <div class="econtainer" id="jsj">
+                        <a href="https://weibo.com/7876594339/OjLmh0r08" target="_blank">
+                            <div class="econtentboxw">
+                                <h2>女高风暴 1（我养的猫又逃跑了）</h2>
+                                <p>直球妹和strong哥的故事（❓）</p>
+                            </div>
+                        </a>
+                        <a href="https://weibo.com/7876594339/OjUxur0Bz" target="_blank">
+                            <div class="econtentboxw">
+                                <h2>女高风暴 2（我养的猫又逃跑了）</h2>
+                                <p>绿色互联网 文明靠大家 </p>
+                            </div>
+                        </a>
+                        <a href="https://weibo.com/7876594339/Ok4vDgk6u" target="_blank">
+                            <div class="econtentboxw">
+                                <h2>女高风暴3（我养的猫又逃跑了）</h2>
+                                <p>没梗的来了，走走剧情吧好吗好的</p>
+                            </div>
+                        </a>
+                        <a href="https://weibo.com/7876594339/Okn7Jcv4K" target="_blank">
+                            <div class="econtentboxw">
+                                <h2>女高风暴 4（我养的猫又逃跑了）</h2>
+                                <p>快速推进一下</p>
+                            </div>
+                        </a>
+                        <a href="https://weibo.com/7876594339/OkwRX76XN" target="_blank">
+                            <div class="econtentboxw">
+                                <h2>女高风暴 5（我养的猫又逃跑了）</h2>
+                                <p>完结了！</p>
+                            </div>
+                        </a>
+                </div>
+                <div class="econtainer">
+                    <a href="https://weibo.com/7808562903/NEpXu87vt" target="_blank">
+                        <div class="econtentboxw">
+                            <h2>捡手机（WildfireSpringwind）</h2>
+                            <p>捡手机</p>
+                        </div>
+                    </a>
+                    <a href="https://weibo.com/7808562903/NEJl263fj" target="_blank">
+                        <div class="econtentboxw">
+                            <h2>捡手机（WildfireSpringwind）</h2>
+                            <p>捡手机</p>
+                        </div>
+                    </a>
+                    <a href="https://weibo.com/7808562903/O2P49ihj7" target="_blank">
+                        <div class="econtentboxw">
+                            <h2>捡手机（WildfireSpringwind）</h2>
+                            <p>捡手机</p>
+                        </div>
+                    </a>
+                    <a href="https://weibo.com/7808562903/O9gh7nmPk" target="_blank">
+                        <div class="econtentboxw">
+                            <h2>捡手机（WildfireSpringwind）</h2>
+                            <p>捡手机</p>
+                        </div>
+                    </a>
+                    <a href="https://weibo.com/7808562903/Oem1n2Fge" target="_blank">
+                        <div class="econtentboxw">
+                            <h2>捡手机（WildfireSpringwind）</h2>
+                            <p>捡手机</p>
+                        </div>
+                    </a>
+                </div>
+                <!-- 知乎体 -->
+                <div class="econtainer" id="zht">
+                    <a href="https://bk.jdkg.fun/works/56559973/chapters/143749381" target="_blank">
+                        <div class="econtentboxa">
+                            <h2>双一流的我可以在top3脖子上留下吻痕吗？</h2>
+                            <p>todaysaqkong</p>
+                            <p>基于现实学历的校园au</p>
+                            <p>上交学妹X上体学长</p>
+                        </div>
+                    </a>
+                </div>
+                
+            </div>
+            <button id="backToTop" onclick="scrollToTop()" style="color: pink;">⬆</button>
+        </div>
+        <div class="sy">
+            <img src="./img/sy.png">
+        </div>
+        
+    </div>
+
+<script>
+    const playPause= document.querySelector('.playPause');
+    const next= document.querySelector('.next');
+    const audio= document.querySelector('audio');
+    
+    // song list
+    const songList =[
+        {
+            path:"./bgm/陈奕迅 - 无条件.mp3",
+        },
+    ];
+
+    //load song
+    const loadSong = (songList) => {
+        audio.src = songList.path;//
+    
+    }
+
+    let i = 0;
+    loadSong (songList[i]);
+    let songPlaying = true;
+    audio.play();
+    
+    //play song
+    const playSong = ()=>{
+    songPlaying = true;
+    audio.play();
+    playPause.classList.add('active');
+    playPause.innerHTML = '<span class="material-icons">pause</span>';
+    }
+                
+    //pause song
+    const pauseSong = () => {
+    songPlaying = false;
+    audio.pause();
+    playPause.classList.remove('active');
+    playPause.innerHTML = ' <span class="material-icons">play_arrow</span>';
+    }
+
+    //play/pause song
+    playPause.addEventListener("click",() => (songPlaying? pauseSong() : playSong()));
+
+    //next song
+    const nextSong = () => {
+    i++;
+    if (i > (songList.length - 1)){
+        i = 0;
+    }
+    loadSong(songList[i]);
+    playSong();
+    }
+    
+    // 播放完毕监听事件（下一首）
+    audio.addEventListener("ended", function () {
+        nextSong()
+    })
+
+        // 滚动事件监听器，用于显示/隐藏返回顶部按钮
+window.onscroll = function() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    document.getElementById('backToTop').style.display = 'block';
+    } else {
+    document.getElementById('backToTop').style.display = 'none';
+    }
+};
+
+  // 返回顶部的函数
+function scrollToTop() {
+    document.body.scrollTop = 0; // 对Safari
+    document.documentElement.scrollTop = 0; // 对Chrome, Firefox, IE 和 Opera
+}
+</script>
+</body>
+</html>

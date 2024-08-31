@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> 
+    <title>圆满河粉摊探店博主</title>
+    <link rel="icon" href="./img/ym-sweet.jpg" type="image/x-icon">
+    <style>
+        .bodyDiv{
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            font-family:ZhuZi GuDian,Times New Roman,Times,serif;
+        }
+        .menu-title {
+    text-align: center;
+    margin-bottom: 10px;
+    color: pink;
+}
+        center{
+    margin-top: 10px;
+}
+.sy{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+}
+.sy img{
+    width: 100px;
+    height: auto;
+}
+/* 播放器 */
+        .musicbody {
+    display: flex;
+    float: right;
+}
+.music{
+    display: flex;
+    flex-direction: column;
+}
+.Mbtns div {
+    display: flex;
+    color:pink;
+    cursor: pointer;
+    margin-right: 5px;
+}
+.Mbtns div:active,
+.Mbtns div.active
+    {
+    color: pink;
+}
+.Mbtns .playPause {
+    height: 20px;
+    width: 20px;
+}
+.Mbtns .material-icons {
+    font-size: 20px;
+}
+.Mbtns .playPause span {
+    font-size: 20px;
+}
+
+@font-face {
+        font-family: 'ZhuZi GuDian';
+        src: url("./fonts/FZFW_ZhuZiGuDian_MP_Regular.subset.woff2")
+        format("woff2");
+        font-weight: 400;
+        font-display: swap;
+    }
+    @font-face {
+    font-family: 'Rungli';
+    src: url('./fonts/Rungli_Italic_MP.subset.woff2') format("woff2");
+    font-weight: 400;
+    font-style: italic;
+    font-display: swap
+    }
+    @font-face {
+    font-family: 'Helveesti';
+    src: url('/fonts/ABCHelveesti-Regular_MP_Pinyin.subset.woff2') format("woff2");
+    font-weight: 400;
+    font-display: swap
+    }
+    .content{
+        width: 40%;
+        display:flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        margin: 30px;
+    }
+    a{
+    text-decoration: none; /* 移除下划线等装饰 */
+    color: inherit; /* 文字颜色继承父元素 */
+    background: transparent; /* 背景透明 */
+    border: none; /* 无边框 */
+    padding: 0; /* 无内边距 */
+    margin: 0; /* 无外边距 */
+}
+html {
+background: url('./img/thanks.jpg') no-repeat center center fixed;
+background-size: cover;
+}
+    </style>
+</head>
+<div class="bodyDiv">
+        <center>
+            <div class="menu-title">
+                <h2>圆满河粉摊探店博主（应援曲篇）
+                    <div class="musicbody">
+                        <div class="music">
+                            <audio src="" ></audio>
+                            <div class="Mbtns">
+                                <div class="playPause active">
+                                    <span class="material-icons">
+                                        pause
+                                        </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </h2>
+                <h3>点击文字跳转</h3>
+            </div>
+            <div class="content"><h2><a class="no-style" href="https://music.163.com/#/program?id=2527648581&uct2=0YVxNleB%2F3oLzq6yn2BT6w%3D%3D&djId=1819769332&app_version=8.10.71">戟</a></h2></div>
+            <div class="content"><h2><a class="no-style" href="https://music.163.com/#/song?id=1912676760&dlt=0846">碎碎念指南</a></h2></div>
+            <div class="content"><h2><a class="no-style" href="https://music.163.com/#/song?id=1884043957&uct2=ZM7%2Breu5ElrGC5cNUbA50w%3D%3D&playerUIModeId=1185001&PlayerStyles_SynchronousSharing=c&dlt=0846&app_version=9.1.50&sc=wm&tn=">唯心主义小甜歌</a></h2></div>
+        </center>
+        </div>
+        <div class="sy">
+            <img src="./img/sy.png">
+        </div>
+</div>
+
+<script>
+    const playPause= document.querySelector('.playPause');
+    const next= document.querySelector('.next');
+    const audio= document.querySelector('audio');
+    
+    // song list
+    const songList =[
+        {
+            path:"./bgm/Christina Perri - A Thousand Years.mp3",
+        },
+    ];
+
+    //load song
+    const loadSong = (songList) => {
+        audio.src = songList.path;//
+    
+    }
+
+    let i = 0;
+    loadSong (songList[i]);
+    let songPlaying = true;
+    audio.play();
+    
+    //play song
+    const playSong = ()=>{
+    songPlaying = true;
+    audio.play();
+    playPause.classList.add('active');
+    playPause.innerHTML = '<span class="material-icons">pause</span>';
+    }
+                
+    //pause song
+    const pauseSong = () => {
+    songPlaying = false;
+    audio.pause();
+    playPause.classList.remove('active');
+    playPause.innerHTML = ' <span class="material-icons">play_arrow</span>';
+    }
+
+    //play/pause song
+    playPause.addEventListener("click",() => (songPlaying? pauseSong() : playSong()));
+
+    //next song
+    const nextSong = () => {
+    i++;
+    if (i > (songList.length - 1)){
+        i = 0;
+    }
+    loadSong(songList[i]);
+    playSong();
+    }
+    
+    // 播放完毕监听事件（下一首）
+    audio.addEventListener("ended", function () {
+        nextSong()
+    })
+</script>
+</body>
+</html>

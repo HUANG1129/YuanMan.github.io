@@ -1,0 +1,731 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> 
+    <title>圆满河粉摊探店博主</title>
+    <link rel="icon" href="./img/ym-sweet.jpg" type="image/x-icon">
+    <style>
+        .bodyDiv{
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+        }
+        .menu-title {
+    text-align: center;
+    margin-bottom: 10px;
+    font-family:ZhuZi GuDian,Times New Roman,Times,serif;
+    color: pink;
+}
+        /*视频部分*/
+        .veDiv{
+            height: auto;
+        }
+        .pho{
+            width: 50px;
+            height: 50px;
+            float: left;
+            line-height: 50%;
+            text-align: center;
+            border-radius: 50px;
+            margin-top: 10px;
+            margin-left: 10px;
+            margin-right: 10px;
+        }
+        .name{
+            width: 60%;
+            height: 25px;
+            float: left;
+            margin-top: 20px;
+        }
+        .Content{
+            width: 100%;
+            height: auto;
+            margin-top: 10px;
+            float: left;
+            font-size: small;
+        }
+        .phoimg{
+            max-width: 100%;
+            line-height: 50px;
+            text-align: center;
+            border-radius: 50%;
+        }
+        .img{
+            max-width: 80%;
+        }
+        center{
+    margin-top: 10px;
+}
+.sy{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+}
+.sy img{
+    width: 100px;
+    height: auto;
+}
+/* 播放器 */
+        .musicbody {
+    display: flex;
+    float: right;
+}
+.music{
+    display: flex;
+    flex-direction: column;
+}
+.Mbtns div {
+    display: flex;
+    color:pink;
+    cursor: pointer;
+    margin-right: 5px;
+}
+.Mbtns div:active,
+.Mbtns div.active
+    {
+    color: pink;
+}
+.Mbtns .playPause {
+    height: 20px;
+    width: 20px;
+}
+.Mbtns .material-icons {
+    font-size: 20px;
+}
+.Mbtns .playPause span {
+    font-size: 20px;
+}
+
+@font-face {
+        font-family: 'ZhuZi GuDian';
+        src: url("./fonts/FZFW_ZhuZiGuDian_MP_Regular.subset.woff2")
+        format("woff2");
+        font-weight: 400;
+        font-display: swap;
+    }
+    @font-face {
+    font-family: 'Rungli';
+    src: url('./fonts/Rungli_Italic_MP.subset.woff2') format("woff2");
+    font-weight: 400;
+    font-style: italic;
+    font-display: swap
+    }
+    @font-face {
+    font-family: 'Helveesti';
+    src: url('/fonts/ABCHelveesti-Regular_MP_Pinyin.subset.woff2') format("woff2");
+    font-weight: 400;
+    font-display: swap
+    }
+    </style>
+</head>
+<div class="bodyDiv">
+        <center>
+            <div class="menu-title">
+                <h2>圆满河粉摊探店博主（视频篇）
+                    <div class="musicbody">
+                        <div class="music">
+                            <audio src="" ></audio>
+                            <div class="Mbtns">
+                                <div class="playPause active">
+                                    <span class="material-icons">
+                                        pause
+                                        </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </h2>
+                <h3>点击图片跳转</h3>
+            </div>
+        </center>
+        <!-- 视频部分 -->
+        <div class="veDiv">
+            <div class="pho" >
+                <img src="./img/bili1.jpg" alt="" class="phoimg" >
+            </div>
+            <div class="name">啦啦叽叽叽</div>
+            <div class="Content">
+                【圆满/远曼】时间线 | 与你一起 穿越时间 慢慢圆满
+                <p class="Content">
+                    <a href="https://www.bilibili.com/video/BV19y4y1R72Q/?spm_id_from=333.999.0.0&vd_source=4604d8079b57f4fd4e8655919e18cac6" target="_blank">
+                        <img src="./img/bili1-1.jpg" alt="" class="img" >
+                    </a>
+                </p>
+            </div>
+        </div>
+        <div class="veDiv">
+            <div class="pho" >
+                <img src="./img/bili2.jpg" alt="" class="phoimg" >
+            </div>
+            <div class="name">33的档案室</div>
+            <div class="Content">
+                【圆满｜远曼】用8首粤语歌唱出他们的故事
+                <p class="Content">
+                    <a href="https://www.bilibili.com/video/BV15A4y1X7mK/?spm_id_from=333.999.0.0&vd_source=4604d8079b57f4fd4e8655919e18cac6" target="_blank">
+                        <img src="./img/bili2-1.jpg" alt="" class="img" >
+                    </a>
+                    
+                </p>
+            </div>
+            <div class="Content">
+                当你是圆满的对手教练裁判，你的视角be like：
+                <p class="Content">
+                    <a href="https://www.bilibili.com/video/BV1Qr4y1B7Tm/?spm_id_from=333.999.0.0" target="_blank">
+                        <img src="./img/bili2-2.jpg" alt="" class="img" >
+                    </a>
+                    
+                </p>
+            </div>
+            <div class="Content">
+                【圆满｜远曼】From Enchanted to You Are In Love.
+                <p class="Content">
+                    <a href="https://www.bilibili.com/video/BV1b5411X7ee/?spm_id_from=333.337.search-card.all.click&vd_source=7cec16a4ef9cb827884cf29902fd8482" target="_blank">
+                        <img src="./img/bili2-3.jpg" alt="" class="img" >
+                    </a>
+                    
+                </p>
+            </div>
+        </div>
+        <div class="veDiv">
+            <div class="pho" >
+                <img src="./img/bili3.jpg" alt="" class="phoimg" >
+            </div>
+            <div class="name">阿边ni</div>
+            <div class="Content">
+                【圆满/远曼X到此为止】“到此为止 各有各的天地” 现实远不止于此｜勿上升｜故事向
+                <p class="Content">
+                    <a href="https://www.bilibili.com/video/BV1nL411c7qn/?spm_id_from=333.1007.0.0&vd_source=4604d8079b57f4fd4e8655919e18cac6" target="_blank">
+                        <img src="./img/bili3-1.jpg" alt="" class="img" >
+                    </a>
+                </p>
+            </div>
+        </div>
+        <div class="veDiv">
+            <div class="pho" >
+                <img src="./img/bili4.jpg" alt="" class="phoimg" >
+            </div>
+            <div class="name">你的梦中梦中</div>
+            <div class="Content">
+                【圆满】林高远x王曼昱｜苏眉｜数百万一双一对 和你是唯一的一对
+                <p class="Content">
+                    <a href="https://www.bilibili.com/video/BV1a3411h7ik/?spm_id_from=333.999.0.0&vd_source=4604d8079b57f4fd4e8655919e18cac6" target="_blank">
+                        <img src="./img/bili4-1.jpg" alt="" class="img" >
+                    </a>
+                </p>
+            </div>
+            <div class="Content">
+                【圆满】林高远x王曼昱｜无条件｜你永远胜过别人
+                <p class="Content">
+                    <a href="https://www.bilibili.com/video/BV15b4y1h78d/?spm_id_from=333.999.0.0&vd_source=4604d8079b57f4fd4e8655919e18cac6" target="_blank">
+                        <img src="./img/bili4-2.jpg" alt="" class="img" >
+                    </a>
+                </p>
+            </div>
+        </div>
+        <div class="veDiv">
+            <div class="pho" >
+                <img src="./img/bili5.jpg" alt="" class="phoimg" >
+            </div>
+            <div class="name">云山长</div>
+            <div class="Content">
+                【圆满】推开世界的门 | 林高远x王曼昱 | 原来你就是我 走失的地方
+                <p class="Content">
+                    <a href="https://www.bilibili.com/video/BV1pD4y1e7mW/?spm_id_from=333.999.0.0&vd_source=4604d8079b57f4fd4e8655919e18cac6" target="_blank">
+                        <img src="./img/bili5-1.jpg" alt="" class="img" >
+                    </a>
+                </p>
+            </div>
+            <div class="Content">
+                    【圆满】在这座城市遗失了你 | 林高远x王曼昱 | 而我爱你
+                    <p class="Content">
+                        <a href="https://www.bilibili.com/video/BV12b411Q7iB/?spm_id_from=333.999.0.0&vd_source=4604d8079b57f4fd4e8655919e18cac6" target="_blank">
+                            <img src="./img/bili5-2.jpg" alt="" class="img" >
+                        </a>
+                    </p>
+            </div>
+            <div class="Content">
+                    【圆满】哪里只得我共你 | 林高远×王曼昱 | 就用我的双手 带着你走 不挣扎 只紧扣
+                    <p class="Content">
+                        <a href="https://www.bilibili.com/video/BV1dP4y1M7cG/?spm_id_from=333.999.0.0&vd_source=7cec16a4ef9cb827884cf29902fd8482" target="_blank">
+                            <img src="./img/bili5-3.jpg" alt="" class="img" >
+                        </a>
+                    </p>
+            </div>
+            <div class="Content">
+                【圆满】勿念 | 林高远x王曼昱 | 双视角 | 怀疑沿途 原来惯了错过 那感觉
+                    <p class="Content">
+                        <a href="https://www.bilibili.com/video/BV1YF411t7Mg/?spm_id_from=333.999.0.0&vd_source=7cec16a4ef9cb827884cf29902fd8482" target="_blank">
+                            <img src="./img/bili5-4.jpg" alt="" class="img" >
+                        </a>
+                    </p>
+            </div>
+            <div class="Content">
+                    【圆满】生命之花 | 林高远×王曼昱 | 缘尽也自圆
+                    <p class="Content">
+                        <a href="https://www.bilibili.com/video/BV1um4y1d7Sc/?spm_id_from=333.999.0.0&vd_source=7cec16a4ef9cb827884cf29902fd8482" target="_blank">
+                            <img src="./img/bili5-5.jpg" alt="" class="img" >
+                        </a>
+                    </p>
+            </div>
+            <div class="Content">
+                    【圆满】温柔地，暴烈地 | 林高远x王曼昱 | 偏是你，是你
+                    <p class="Content">
+                        <a href="https://www.bilibili.com/video/BV143411D7WW/?spm_id_from=333.337.search-card.all.click&vd_source=7cec16a4ef9cb827884cf29902fd8482" target="_blank">
+                            <img src="./img/bili5-6.jpg" alt="" class="img" >
+                        </a>
+                    </p>
+            </div>
+            <div class="Content">
+                    【圆满】虚拟 | 林高远x王曼昱 | 陪着我像纸笔像自己像雨滴
+                    <p class="Content">
+                        <a href="https://www.bilibili.com/video/BV1T34y1777Q/?spm_id_from=333.999.0.0&vd_source=7cec16a4ef9cb827884cf29902fd8482" target="_blank">
+                            <img src="./img/bili5-7.jpg" alt="" class="img" >
+                        </a>
+                    </p>
+                </div>
+                <div class="Content">
+                    【圆满】飘红 | 林高远x王曼昱 | 来年来月人若变痴呆 仍为你归来
+                    <p class="Content">
+                        <a href="https://www.bilibili.com/video/BV1o94y1X76s/?spm_id_from=333.999.0.0&vd_source=7cec16a4ef9cb827884cf29902fd8482" target="_blank">
+                            <img src="./img/bili5-8.jpg" alt="" class="img" >
+                        </a>
+                    </p>
+                </div>
+                <div class="Content">
+                    【圆满】Happy For You | 林高远x王曼昱 | Haunted by the ghost of us
+                    <p class="Content">
+                        <a href="https://www.bilibili.com/video/BV1dV4y1H7oo/?spm_id_from=333.999.0.0&vd_source=7cec16a4ef9cb827884cf29902fd8482" target="_blank">
+                            <img src="./img/bili5-9.jpg" alt="" class="img" >
+                        </a>
+                    </p>
+                </div>
+                <div class="Content">
+                    【圆满】百年不合 | 林高远x王曼昱 | 辗转一百年 捱到开花才遇见
+                    <p class="Content">
+                        <a href="https://www.bilibili.com/video/BV1vT411E7Yj/?spm_id_from=333.999.0.0&vd_source=7cec16a4ef9cb827884cf29902fd8482" target="_blank">
+                            <img src="./img/bili5-10.jpg" alt="" class="img" >
+                        </a>
+                    </p>
+                </div>
+                <div class="Content">
+                    【圆满】先知 | 林高远x王曼昱 | 催眠我一切 差不多该吻了
+                    <p class="Content">
+                        <a href="https://www.bilibili.com/video/BV1rN4y1K7en/?spm_id_from=333.999.0.0&vd_source=7cec16a4ef9cb827884cf29902fd8482" target="_blank">
+                            <img src="./img/bili5-11.jpg" alt="" class="img" >
+                        </a>
+                    </p>
+                </div>
+                <div class="Content">
+                    【圆满】Photograph | 林高远x王曼昱 | We keep this love in a photograph
+                    <p class="Content">
+                        <a href="https://www.bilibili.com/video/BV1to4y177Ur/?spm_id_from=333.999.0.0&vd_source=7cec16a4ef9cb827884cf29902fd8482" target="_blank">
+                            <img src="./img/bili5-12.jpg" alt="" class="img" >
+                        </a>
+                    </p>
+                </div>
+        </div>
+        <div class="veDiv">
+                    <div class="pho" >
+                        <img src="./img/bili6.jpg" alt="" class="phoimg" >
+                    </div>
+                    <div class="name">ANKLEBONE_</div>
+                    <div class="Content">
+                        《圆满受害者图鉴》
+                        <p class="Content">
+                            <a href="https://www.bilibili.com/video/BV1Jr4y1e7bm/?spm_id_from=333.999.0.0&vd_source=4604d8079b57f4fd4e8655919e18cac6" target="_blank">
+                                <img src="./img/bili6-1.jpg" alt="" class="img" >
+                            </a>
+                        </p>
+                    </div>
+                    <div class="Content">
+                        《圆满受害者图鉴2.0》
+                        <p class="Content">
+                            <a href="https://www.bilibili.com/video/BV1Ru411178D/?spm_id_from=333.788&vd_source=4604d8079b57f4fd4e8655919e18cac6" target="_blank">
+                                <img src="./img/bili6-2.jpg" alt="" class="img" >
+                            </a>
+                        </p>
+                    </div>
+                    <div class="Content">
+                        《圆满受害者图鉴3.0》
+                        <p class="Content">
+                            <a href="https://www.bilibili.com/video/BV1Wr4y1a77i/?p=3&spm_id_from=pageDriver" target="_blank">
+                                <img src="./img/bili6-3.jpg" alt="" class="img" >
+                            </a>
+                        </p>
+                    </div>
+                    <div class="Content">
+                        《圆满受害者图鉴4.0》
+                        <p class="Content">
+                            <a href="https://www.bilibili.com/video/BV1934y127Tg/?spm_id_from=333.788&vd_source=4604d8079b57f4fd4e8655919e18cac6" target="_blank">
+                                <img src="./img/bili6-4.jpg" alt="" class="img" >
+                            </a>
+                        </p>
+                    </div>
+                    <div class="Content">
+                        《圆满受害者图鉴5.0》
+                        <p class="Content">
+                            <a href="https://www.bilibili.com/video/BV1Hd4y1Q7aM/?spm_id_from=333.788&vd_source=4604d8079b57f4fd4e8655919e18cac6" target="_blank">
+                                <img src="./img/bili6-5.jpg" alt="" class="img" >
+                            </a>
+                        </p>
+                    </div>
+                    <div class="Content">
+                        《圆满受害者图鉴6.0》
+                        <p class="Content">
+                            <a href="https://www.bilibili.com/video/BV1Tt4y1T72L/?spm_id_from=333.788&vd_source=4604d8079b57f4fd4e8655919e18cac6" target="_blank">
+                                <img src="./img/bili6-6.jpg" alt="" class="img" >
+                            </a>
+                        </p>
+                    </div>
+                    <div class="Content">
+                        《圆满受害者图鉴7.0》
+                        <p class="Content">
+                            <a href="https://www.bilibili.com/video/BV19h411c7Yi/?spm_id_from=333.788&vd_source=4604d8079b57f4fd4e8655919e18cac6" target="_blank">
+                                <img src="./img/bili6-7.jpg" alt="" class="img" >
+                            </a>
+                        </p>
+                    </div>
+                    <div class="Content">
+                        《圆满直播图鉴》
+                        <p class="Content">
+                            <a href="https://www.bilibili.com/video/BV1aF41137Dc/?spm_id_from=333.788&vd_source=4604d8079b57f4fd4e8655919e18cac6" target="_blank">
+                                <img src="./img/bili6-8.jpg" alt="" class="img" >
+                            </a>
+                        </p>
+                    </div>
+                    <div class="Content">
+                        《圆满九大美德》
+                        <p class="Content">
+                            <a href="https://www.bilibili.com/video/BV1ra411v71y/?spm_id_from=333.999.0.0&vd_source=4604d8079b57f4fd4e8655919e18cac6" target="_blank">
+                                <img src="./img/bili6-9.jpg" alt="" class="img" >
+                            </a>
+                        </p>
+                    </div>
+                    <div class="Content">
+                        《阳光开朗大男孩（圆满ver.）》
+                        <p class="Content">
+                            <a href="https://www.bilibili.com/video/BV1qL41187RX/?spm_id_from=333.337.search-card.all.click&vd_source=7cec16a4ef9cb827884cf29902fd8482" target="_blank">
+                                <img src="./img/bili6-10.jpg" alt="" class="img" >
+                            </a>
+                        </p>
+                    </div>
+                    <div class="Content">
+                        《圆满爱情公式》
+                        <p class="Content">
+                            <a href="https://www.bilibili.com/video/BV1ZZ4y127Nb/?spm_id_from=333.337.search-card.all.click&vd_source=7cec16a4ef9cb827884cf29902fd8482" target="_blank">
+                                <img src="./img/bili6-11.jpg" alt="" class="img" >
+                            </a>
+                        </p>
+                    </div>
+                    <div class="Content">
+                        《圆满完形填空》
+                        <p class="Content">
+                            <a href="https://www.bilibili.com/video/BV1X3411n7Wb/?spm_id_from=333.337.search-card.all.click&vd_source=7cec16a4ef9cb827884cf29902fd8482" target="_blank">
+                                <img src="./img/bili6-12.jpg" alt="" class="img" >
+                            </a>
+                        </p>
+                    </div>
+                    <div class="Content">
+                        《敏感词》
+                        <p class="Content">
+                            <a href="https://www.bilibili.com/video/BV1H94y1d7A6/?spm_id_from=333.337.search-card.all.click&vd_source=7cec16a4ef9cb827884cf29902fd8482" target="_blank">
+                                <img src="./img/bili6-13.jpg" alt="" class="img" >
+                            </a>
+                        </p>
+                    </div>
+                    <div class="Content">
+                        《圆满采访记录》
+                        <p class="Content">
+                            <a href="https://www.bilibili.com/video/BV18u41197o6/?spm_id_from=333.337.search-card.all.click&vd_source=7cec16a4ef9cb827884cf29902fd8482" target="_blank">
+                                <img src="./img/bili6-14.jpg" alt="" class="img" >
+                            </a>
+                        </p>
+                    </div>
+                    <div class="Content">
+                        【圆满】带我走
+                        <p class="Content">
+                            <a href="https://www.bilibili.com/video/BV14u411m7DS/?spm_id_from=333.337.search-card.all.click&vd_source=7cec16a4ef9cb827884cf29902fd8482" target="_blank">
+                                <img src="./img/bili6-15.jpg" alt="" class="img" >
+                            </a>
+                        </p>
+                    </div>
+        </div>
+        <div class="veDiv">
+                        <div class="pho" >
+                            <img src="./img/bili7.jpg" alt="" class="phoimg" >
+                        </div>
+                        <div class="name">--哈哈</div>
+                        <div class="Content">
+                            【圆满|远曼】“没有人比我更懂自然”
+                            <p class="Content">
+                                <a href="https://www.bilibili.com/video/BV11S4y1v79K/?spm_id_from=333.999.0.0&vd_source=4604d8079b57f4fd4e8655919e18cac6" target="_blank">
+                                    <img src="./img/bili7-1.jpg" alt="" class="img" >
+                                </a>
+                            </p>
+                        </div>
+                    <div class="Content">
+                        【圆满|远曼】远曼名场面合集
+                        <p class="Content">
+                            <a href="https://www.bilibili.com/video/BV1tr4y1e7Rq/?spm_id_from=333.999.0.0&vd_source=4604d8079b57f4fd4e8655919e18cac6" target="_blank">
+                                <img src="./img/bili7-2.jpg" alt="" class="img" >
+                            </a>
+                        </p>
+                    </div>
+                    <div class="Content">
+                        【圆满】“睇你好似電燈膽”
+                        <p class="Content">
+                            <a href="https://www.bilibili.com/video/BV1FP41187uJ/?spm_id_from=333.999.0.0&vd_source=7cec16a4ef9cb827884cf29902fd8482" target="_blank">
+                                <img src="./img/bili7-3.jpg" alt="" class="img" >
+                            </a>
+                        </p>
+                    </div>
+        </div>
+        <div class="veDiv">
+                        <div class="pho" >
+                            <img src="./img/bili8.jpg" alt="" class="phoimg" >
+                        </div>
+                        <div class="name">没作业很高兴认识你</div>
+                        <div class="Content">
+                            【圆满/远曼】【林高远×王曼昱】如果声音不记得｜22全锦夺冠贺
+                            <p class="Content">
+                                <a href="https://www.bilibili.com/video/BV1nG411K72e/?spm_id_from=333.788&vd_source=4604d8079b57f4fd4e8655919e18cac6" target="_blank">
+                                    <img src="./img/bili8-1.jpg" alt="" class="img" >
+                                </a>
+                                
+                            </p>
+                        </div>
+        </div>
+        <div class="veDiv">
+                        <div class="pho" >
+                            <img src="./img/bili9.jpg" alt="" class="phoimg" >
+                        </div>
+                        <div class="name">Jisungalaxy </div>
+                        <div class="Content">
+                            「圆满/远曼」“暧昧有点烦？”“那就直接热恋吧！”｜怎么还不爱
+                            <p class="Content">
+                                <a href="https://www.bilibili.com/video/BV1PD4y1M7aJ/?spm_id_from=333.999.0.0&vd_source=4604d8079b57f4fd4e8655919e18cac6" target="_blank">
+                                    <img src="./img/bili9-1.jpg" alt="" class="img" >
+                                </a>
+                                
+                            </p>
+                        </div>
+        </div>
+        <div class="veDiv">
+                        <div class="pho" >
+                            <img src="./img/bili10.jpg" alt="" class="phoimg" >
+                        </div>
+                        <div class="name">榴莲盐汽水-</div>
+                        <div class="Content">
+                            【圆满】林高远×王曼昱｜为了寻找你，我搬进鸟的眼睛，经常盯着路过的风
+                            <p class="Content">
+                                <a href="https://www.bilibili.com/video/BV1oB4y1r77p/?spm_id_from=333.999.0.0&vd_source=4604d8079b57f4fd4e8655919e18cac6" target="_blank">
+                                    <img src="./img/bili10-1.jpg" alt="" class="img" >
+                                </a>
+                            </p>
+                        </div>
+                        <div class="Content">
+                            【圆满】不被定义的风｜双声道｜你是风啊，别怕大山，翻过他就是了
+                            <p class="Content">
+                                <a href="https://www.bilibili.com/video/BV1NY4y1x7wK/?spm_id_from=333.999.0.0&vd_source=4604d8079b57f4fd4e8655919e18cac6" target="_blank">
+                                    <img src="./img/bili10-2.jpg" alt="" class="img" >
+                                </a>
+                            </p>
+                        </div>
+                        <div class="Content">
+                            【圆满】| 致独属我们的春光//你要写圆满，就不能只写阳光、春花，你还要写...
+                            <p class="Content">
+                                <a href="https://www.bilibili.com/video/BV1JY411C7pT/?spm_id_from=333.999.0.0&vd_source=4604d8079b57f4fd4e8655919e18cac6" target="_blank">
+                                    <img src="./img/bili10-3.jpg" alt="" class="img" >
+                                </a>
+                            </p>
+                        </div>
+        </div>
+        <div class="veDiv">
+                            <div class="pho" >
+                                <img src="./img/bili11.jpg" alt="" class="phoimg" >
+                            </div>
+                            <div class="name">拽姐不需要昵称</div>
+                            <div class="Content">
+                                【圆满X小半】对你的偏爱，明目张胆
+                                <p class="Content">
+                                    <a href="https://www.bilibili.com/video/BV1TW4y1s7iU/?spm_id_from=333.999.0.0&vd_source=4604d8079b57f4fd4e8655919e18cac6" target="_blank">
+                                        <img src="./img/bili11-1.jpg" alt="" class="img" >
+                                    </a>
+                                </p>
+                            </div>
+        </div>
+        <div class="veDiv">
+                            <div class="pho" >
+                                <img src="./img/bili12.jpg" alt="" class="phoimg" >
+                            </div>
+                            <div class="name">熬夜嗑cp真的会秃头</div>
+                            <div class="Content">
+                                【圆满 | 月弯弯】 “等不到圆满，都怪我们不勇敢” 林高远×王曼昱
+                                <p class="Content">
+                                    <a href="https://www.bilibili.com/video/BV1gR4y1x7uv/?spm_id_from=333.999.0.0&vd_source=4604d8079b57f4fd4e8655919e18cac6" target="_blank">
+                                        <img src="./img/bili12-1.jpg" alt="" class="img" >
+                                    </a>
+                                </p>
+                            </div>
+        </div>
+        <div class="veDiv">
+                            <div class="pho" >
+                                <img src="./img/bili13.jpg" alt="" class="phoimg" >
+                            </div>
+                            <div class="name">Tatabao塔塔塔塔</div>
+                            <div class="Content">
+                                【圆满】林高远•王曼昱｜My Sunshine｜「You are a pretty Sunshine of my life 」「等着我，不要再离开」
+                                <p class="Content">
+                                    <a href="https://www.bilibili.com/video/BV1Zx4y117eM/?spm_id_from=333.999.0.0&vd_source=4604d8079b57f4fd4e8655919e18cac6" target="_blank">
+                                        <img src="./img/bili13-1.jpg" alt="" class="img" >
+                                    </a>
+                                </p>
+                            </div>
+        </div>
+        <div class="veDiv">
+                            <div class="pho" >
+                                <img src="./img/bili14.jpg" alt="" class="phoimg" >
+                            </div>
+                            <div class="name">王崽圆又顺</div>
+                            <div class="Content">
+                                【圆满】【远曼】生生｜有你爱我 永夜也是永昼
+                                <p class="Content">
+                                    <a href="https://www.bilibili.com/video/BV1Qe411T7pM/?spm_id_from=333.999.0.0&vd_source=4604d8079b57f4fd4e8655919e18cac6" target="_blank">
+                                        <img src="./img/bili14-1.jpg" alt="" class="img" >
+                                    </a>
+                                </p>
+                            </div>
+        </div>
+        <div class="veDiv">
+                            <div class="pho" >
+                                <img src="./img/bili15.jpg" alt="" class="phoimg" >
+                            </div>
+                            <div class="name">万里鼎沸</div>
+                            <div class="Content">
+                                圆满|富士山下|“东京之旅一早比一世遥远”
+                                <p class="Content">
+                                    <a href="https://www.bilibili.com/video/BV1Pg411L7jV/?spm_id_from=333.999.0.0&vd_source=4604d8079b57f4fd4e8655919e18cac6" target="_blank">
+                                        <img src="./img/bili15-1.jpg" alt="" class="img" >
+                                    </a>
+                                </p>
+                            </div>
+        </div>
+        <div class="veDiv">
+                            <div class="pho" >
+                                <img src="./img/bili16.jpg" alt="" class="phoimg" >
+                            </div>
+                            <div class="name">加点汽</div>
+                            <div class="Content">
+                                远曼|圆满｜我用什么把你留住
+                                <p class="Content">
+                                    <a href="https://www.bilibili.com/video/BV1Bq4y1B7TA/?spm_id_from=333.999.0.0&vd_source=4604d8079b57f4fd4e8655919e18cac6" target="_blank">
+                                        <img src="./img/bili16-1.jpg" alt="" class="img" >
+                                    </a>
+                                </p>
+                            </div>
+        </div>
+        <div class="veDiv">
+                            <div class="pho" >
+                                <img src="./img/bili17.jpg" alt="" class="phoimg" >
+                            </div>
+                            <div class="name">三文九两</div>
+                            <div class="Content">
+                                【远曼|圆满】带我去找夜生活
+                                <p class="Content">
+                                    <a href="https://www.bilibili.com/video/BV1EV4y1s7R8/?spm_id_from=333.999.0.0&vd_source=7cec16a4ef9cb827884cf29902fd8482" target="_blank">
+                                        <img src="./img/bili17-1.jpg" alt="" class="img" >
+                                    </a>
+                                </p>
+                            </div>
+                            <div class="Content">
+                                搞乒三年，圆满治好了我的精神内耗
+                                <p class="Content">
+                                    <a href="https://www.bilibili.com/video/BV1mm41127J8/?spm_id_from=333.999.0.0&vd_source=7cec16a4ef9cb827884cf29902fd8482" target="_blank">
+                                        <img src="./img/bili17-2.jpg" alt="" class="img" >
+                                    </a>
+                                </p>
+                            </div>
+        </div>
+        <div class="veDiv">
+            <div class="pho" >
+                <img src="./img/bili18.jpg" alt="" class="phoimg" >
+            </div>
+            <div class="name">alohaaliu</div>
+            <div class="Content">
+                「圓滿 ｜世一」·說到最愛你 請頒個世一給我·
+                <p class="Content">
+                    <a href="https://www.bilibili.com/video/BV1to4y1x7wu/?spm_id_from=333.337.search-card.all.click&vd_source=7cec16a4ef9cb827884cf29902fd8482" target="_blank">
+                        <img src="./img/bili18-1.jpg" alt="" class="img" >
+                    </a>
+                </p>
+            </div>
+        
+        </div>
+        <div class="sy">
+            <img src="./img/sy.png">
+        </div>
+</div>
+
+<script>
+    const playPause= document.querySelector('.playPause');
+    const next= document.querySelector('.next');
+    const audio= document.querySelector('audio');
+    
+    // song list
+    const songList =[
+        {
+            path:"./bgm/Christina Perri - A Thousand Years.mp3",
+        },
+    ];
+
+    //load song
+    const loadSong = (songList) => {
+        audio.src = songList.path;//
+    
+    }
+
+    let i = 0;
+    loadSong (songList[i]);
+    let songPlaying = true;
+    audio.play();
+    
+    //play song
+    const playSong = ()=>{
+    songPlaying = true;
+    audio.play();
+    playPause.classList.add('active');
+    playPause.innerHTML = '<span class="material-icons">pause</span>';
+    }
+                
+    //pause song
+    const pauseSong = () => {
+    songPlaying = false;
+    audio.pause();
+    playPause.classList.remove('active');
+    playPause.innerHTML = ' <span class="material-icons">play_arrow</span>';
+    }
+
+    //play/pause song
+    playPause.addEventListener("click",() => (songPlaying? pauseSong() : playSong()));
+
+    //next song
+    const nextSong = () => {
+    i++;
+    if (i > (songList.length - 1)){
+        i = 0;
+    }
+    loadSong(songList[i]);
+    playSong();
+    }
+    
+    // 播放完毕监听事件（下一首）
+    audio.addEventListener("ended", function () {
+        nextSong()
+    })
+</script>
+</body>
+</html>
