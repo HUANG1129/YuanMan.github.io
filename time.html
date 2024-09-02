@@ -4974,6 +4974,70 @@ oMain2024530.style.left = oMain2024530.offsetLeft + speed + "px";
             }
         }
     }
+
+            // song list
+    const songList =[
+        {
+            path:"./bgm/Taylor Swift - Love Story.mp3",
+        },
+        {
+            path:"./bgm/陈奕迅 eason and the duo band - 我们万岁.mp3",
+        },
+        {
+            path:"./bgm/Jake Miller - Lucky Me.mp3",
+        },
+        {
+            path:"./bgm/Sebastián Yatra Isabela Moner - My Only One (No H.mp3",
+        },
+    ];
+    const playPause= document.querySelector('.playPause');
+    const next= document.querySelector('.next');
+    const audio= document.querySelector('audio');
+
+    //load song
+    const loadSong = (songList) => {
+        audio.src = songList.path;//
+    
+    }
+
+    let i = 0;
+    loadSong (songList[i]);
+    let songPlaying = true;
+    audio.play();
+    
+    //play song
+    const playSong = ()=>{
+    songPlaying = true;
+    audio.play();
+    playPause.classList.add('active');
+    playPause.innerHTML = '<span class="material-icons">pause</span>';
+    }
+                
+    //pause song
+    const pauseSong = () => {
+    songPlaying = false;
+    audio.pause();
+    playPause.classList.remove('active');
+    playPause.innerHTML = ' <span class="material-icons">play_arrow</span>';
+    }
+
+    //play/pause song
+    playPause.addEventListener("click",() => (songPlaying? pauseSong() : playSong()));
+
+    //next song
+    const nextSong = () => {
+    i++;
+    if (i > (songList.length - 1)){
+        i = 0;
+    }
+    loadSong(songList[i]);
+    playSong();
+    }
+    
+    // 播放完毕监听事件（下一首）
+    audio.addEventListener("ended", function () {
+        nextSong()
+    })
     </script>
 </body>
 </html>
