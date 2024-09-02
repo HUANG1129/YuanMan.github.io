@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>王曼昱林高远2021-2024巴黎周期赛事成绩</title>
+    <title>王曼昱林高远赛事成绩</title>
     <link rel="icon" href="./img/ym-sweet.jpg" type="image/x-icon">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" />
@@ -131,6 +131,26 @@
     border: 0px;
     font-size: 20px;
 }
+@font-face {
+        font-family: 'ZhuZi GuDian';
+        src: url("./fonts/FZFW_ZhuZiGuDian_MP_Regular.subset.woff2")
+        format("woff2");
+        font-weight: 400;
+        font-display: swap;
+    }
+    @font-face {
+    font-family: 'Rungli';
+    src: url('./fonts/Rungli_Italic_MP.subset.woff2') format("woff2");
+    font-weight: 400;
+    font-style: italic;
+    font-display: swap
+    }
+    @font-face {
+    font-family: 'Helveesti';
+    src: url('/fonts/ABCHelveesti-Regular_MP_Pinyin.subset.woff2') format("woff2");
+    font-weight: 400;
+    font-display: swap
+    }
 /* 播放器 */
 .musicbody {
     display: flex;
@@ -161,22 +181,34 @@
 .Mbtns .playPause span {
     font-size: 20px;
 }
-
+.menu-title {
+    text-align: center;
+    margin-bottom: 10px;
+    font-family:ZhuZi GuDian,Times New Roman,Times,serif;
+}
+h1{
+    color: gold;
+    font-family:ZhuZi GuDian,Times New Roman,Times,serif;
+}
     </style>
 </head>
 <body>
     <center>
-        <div class="musicbody">
-            <div class="music">
-                <audio src="" ></audio>
-                <div class="Mbtns">
-                    <div class="playPause active">
-                        <span class="material-icons">
-                            pause
-                            </span>
+        <div class="menu-title">
+            <h1>圆满赛事成绩
+                <div class="musicbody">
+                    <div class="music">
+                        <audio src="" ></audio>
+                        <div class="Mbtns">
+                            <div class="playPause active">
+                                <span class="material-icons">
+                                    pause
+                                    </span>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div>
+            </h1>
         </div>
     </center>
     <div class="containerbody">
