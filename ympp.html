@@ -523,7 +523,7 @@
                         var that = $(this);
                         // 如果滚动到最后一个项目，并且超过了当前项目高度的一半，
                         // 则将最后一个项目设置为激活状态，并设置背景图片为最后一个项目的图片
-                        if (i == itemLength- 1 && pos > min + $(this).height() / 2 ) {
+                        if (i == itemLength- 2 && pos > min + $(this).height() / 2 ) {
                             selectors.item.removeClass(selectors.activeClass);
                             selectors.id.css(
                                 "background-image",
