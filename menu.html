@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./img/ym-sweet.jpg" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300|Sacramento" rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
+    <title>圆满河粉摊</title>
+    <style>
+        * {
+            outline: none;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            background-color: white;
+            color: #5a4b5c;
+            font-family: 'Georgia', serif;
+            width: 100%;
+            position: relative;
+        }
+        
+        .nav-container {
+            width: 100%;
+            box-sizing: border-box;
+            position: relative;
+            text-align: center;
+            z-index: 100;
+            padding: 10px 0;
+        }
+        
+        .nav-wrapper {
+            display: flex;
+            justify-content: space-around;
+            width: 100%;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .nav-item {
+            font-size: 20px;
+            flex: 1;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            user-select: none;
+            padding: 5px 0;
+            color: #d6497a;
+            position: relative;
+            font-weight: 500;
+        }
+        
+        .nav-item.active {
+            color: #a8325c;
+            font-style: italic;
+            font-weight: 1000;
+        }
+        
+        .nav-item.active::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background-color: #a8325c;
+        }
+        
+        .content-wrapper {
+            width: 100%;
+            margin: 0 auto;
+            box-sizing: border-box;
+            position: relative;
+            z-index: 1;
+            margin-top: 30px;
+        }
+        
+        h5 {
+            margin-top: 0px;
+            color: black;
+            margin-bottom: 20px;
+            font-size: 10px;
+            margin-left: 25px;
+        }
+        
+        .dish {
+            font-weight: bold;
+            margin: 20px 0 8px;
+            font-size: 1.1em;
+            color: #5a4b5c;
+            text-align: center;
+        }
+        .dish1 {
+            font-weight: bold;
+            font-size: 1.1em;
+            color: #5a4b5c;
+            margin-left: 15px;
+        }
+        .ingredient {
+            margin-top: 10px;
+            margin-left: 20px;
+            margin-bottom: 10px;
+            font-size: 0.95em;
+            color: #8b7d8c;
+            line-height: 1.5;
+        }
+        .dish:not(:first-of-type) {
+            padding-top: 15px;
+            width: 90%;
+            margin-left: 5%;
+            border-top: 1.5px dashed #ffccd5;
+        }
+        .menu-section {
+            display: none;
+        }
+        
+        .menu-section.active {
+            display: block;
+            animation: fadeIn 0.5s ease;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+    <div class="nav-container">
+        <div class="nav-wrapper">
+            <div class="nav-item active" data-target="a">圆满河粉摊</div>
+            <div class="nav-item" data-target="b">探店博主</div>
+            <div class="nav-item" data-target="c">特别感谢</div>
+        </div>
+    </div>
+    <center>
+    <div class="content-wrapper">
+        <div class="menu-section active" id="a-content">
+            <div class="dish"><span></span></div>
+            <a href="timeline.html" style="text-decoration: none; color: inherit;"  target="_blank">
+                <div class="dish"><span>圆满时间线</span></div>
+                <div class="ingredient">
+                    <p>BGM：Love Story/我们万岁/Lucky me/My Only One/圆</p>
+                    <p>点击文字/图片可跳转至来源<br>音乐播放器在右上角,有些浏览器需要手动打开。</p>
+                </div>
+            </a>
+            <div class="dish"><span></span></div>
+            <a href="honor.html" style="text-decoration: none; color: inherit;" target="_blank">
+                <div class="dish"><span>2021-2025赛事成绩</span></div>
+                <div class="ingredient">
+                    <p>BGM：荣耀向我俯首</p>
+                    <p>查询输入年份/比赛名称，右下角有返回顶部的按钮，音乐播放器在右上角，希望圆满多拿金色的牌牌。</p>
+                </div>
+            </a>
+            <div class="dish"><span></span></div>
+            <a href="ympp.html" style="text-decoration: none; color: inherit;" target="_blank">
+                <div class="dish"><span>混双时间轴</span></div>
+                <div class="ingredient">
+                    <p>BGM：苏眉</p>
+                    <p>背景音乐在右上角控制播放和暂停。<br>向下滑动显示圆满混双照片、比赛名称、年份以及语句，音乐播放器在右上角。</p>
+                </div>
+            </a>
+        </div>
+        <div class="menu-section" id="b-content">
+            <center><h5>感谢大家为爱发电，如有不妥马上删除</h5></center>
+            <div class="dish"><span><a href="ymvideo.html" target="_blank">视频篇</span></div>
+            <div class="ingredient">视频剪辑<br>（BGM：A Thousand Years）</div>
+            </a>
+            <div class="dish"><span><a href="ymnovel.html" target="_blank">同人文</span></div>
+            <div class="ingredient">BGM：无条件</div>
+            </a>
+            <div class="dish"><span><a href="ymdraw.html" target="_blank">同人画</span></div>
+            <div class="ingredient">可向右滑动&点击可跳转至来源<br>（BGM：My Cookie Can）</div>
+            </a>
+            <div class="dish"><span><a href="ymdb.html" target="_blank">领磕帖</span></div>
+            <div class="ingredient">点击文字跳转，打不开就是帖子没了<br>（BGM：慢慢喜欢你）</div>
+            </a>
+            <div class="dish"><span>应援曲</span></div>
+            <div class="ingredient"><a class="nostyle" target="_blank" href="https://music.163.com/#/program?id=2527648581&uct2=0YVxNleB%2F3oLzq6yn2BT6w%3D%3D&djId=1819769332&app_version=8.10.71">戟</a></div>
+            <div class="ingredient"><a class="nostyle" target="_blank" href="https://music.163.com/#/song?id=1912676760&dlt=0846">碎碎念指南</a></div>
+            <div class="ingredient"><a class="nostyle" target="_blank" href="https://music.163.com/#/song?id=1884043957&uct2=ZM7%2Breu5ElrGC5cNUbA50w%3D%3D&playerUIModeId=1185001&PlayerStyles_SynchronousSharing=c&dlt=0846&app_version=9.1.50&sc=wm&tn=">唯心主义小甜歌</a></div>
+            <div class="dish"><span>PhotoBook</span></div>
+            <div class="ingredient"><a class="nostyle" target="_blank" href="https://flbook.com.cn/c/4tJkitiraJ">我们曾拥有过那些美丽传说</a></div>
+            <div class="ingredient"><a class="nostyle" target="_blank" href="https://flbook.com.cn/c/ShhPJxyj5g">晚风里</a></div>
+            <div class="ingredient"><a class="nostyle" target="_blank" href="https://flbook.com.cn/c/eGhRst9jKU#page/1">如果云知道</a></div>
+            <div class="dish"><span><a href="ympic.html" target="_blank">表情包和梗图</span></div>
+                <div class="ingredient">点击图片跳转<br>（BGM：Golden Hour）</div>
+            </a>
+        </div>
+        <div class="menu-section" id="c-content">
+            <div class="dish1"><span>微博</span></div>
+            <div class="ingredient">
+                <p>王曼昱</p>
+                <p>Eric-林高远</p>
+                <p>小林将军记事簿</p>
+                <p>今天不吃煎蛋</p>
+                <p>33thCreed</p>
+                <p>EUNSEUL_</p>
+                <p>酸奶叩叩</p>
+                <p>双莓派_yura</p>
+                <p>你好王祖贤阿</p>
+                <p>芭乐薄荷烤奶</p>
+                <p>理科生巴扎黑LuckyW99</p>
+                <p>李武军</p>
+                <p>好眠锦鲤_</p>
+                <p>格林不童话GREENS</p>
+                <p>全糖奶兴</p>
+                <p>噗噗哎次次鬼</p>
+                <p>奶青七分糖加波霸</p>
+                <p>_aoao23</p>
+                <p>_underwater-</p>
+                <p>_小茅台</p>
+                <p>想吃鸡蛋_Claire</p>
+                <p>修勾不会游泳</p>
+                <p>Clear-sky-z</p>
+                <p>我养的猫又逃跑了</p>
+                <p>WildfireSpringwind</p>
+                <p>WAVES漫潮</p>
+                <p>ITTF国际乒联</p>
+                <p>李宁乒乓球</p>
+                <p>新浪乒乓球</p>
+                <p>咪咕体育</p>
+                <p>木棉花的花什么时候开</p>
+                <p>AllForWangMY</p>
+                <p>林高远热水供应站</p>
+                <p>博客天下</p>
+                <p>C咖油皮护肤</p>
+                <p>Chninnm</p>
+                <p>ESQUIREfine</p>
+                <p>GLASS中文版</p>
+                <p>京东电脑数码</p>
+                <p>Kiehls家的骨头先生</p>
+                <p>ARENAHOMMEPLUS时尚竞技场</p>
+                <p>摄影师吴明</p>
+                <p>NY-STYLE</p>
+                <p>乒乓球迷先锋</p>
+                <p>乒乓report</p>
+                <p>乒乓世界TTW</p>
+                <p>乒乓report-新传在线</p>
+                <p>全运广州</p>
+                <p>石甫天</p>
+                <p>SoFigaro中文版</p>
+                <p>薇诺娜</p>
+                <p>珑骧Longchamp</p>
+                <p>WTT世界乒联</p>
+                <p>WTT大满贯</p>
+                <p>小度小度</p>
+                <p>黑龙江省总工会</p>
+                <p>工人日报</p>
+                <p>优酷体育</p>
+                <p>FOCUS聚焦官方</p>
+                <p>糊糊和小岱</p>
+                <p>VISION青年视觉</p>
+                <p>天天体育</p>
+                <p>北京时间</p>
+                <p>孙小雪淹不死</p>
+                <p>微博竞燃之夜</p>
+            </div>
+            <div class="dish1"><span>小红书</span></div>
+            <div class="ingredient">
+                <p>72%</p>
+                <p>阿糖-</p>
+                <p>Alsman.BD（唯🐟🐰）</p>
+                <p>Baimuan-</p>
+                <p>Benny吴</p>
+                <p>八月</p>
+                <p>今天吃什么？</p>
+                <p>Kayccee</p>
+                <p>明人不放暗屁🤡</p>
+                <p>remember</p>
+                <p>Remi_涂涂</p>
+                <p>Rice_Y</p>
+                <p>takkiki</p>
+                <p>小鱼呆呆儿er</p>
+                <p>無上真理</p>
+                <p>Yasmine</p>
+                <p>艺人化妆师浩楠</p>
+            </div>
+            <div class="dish1"><span>哔哩哔哩</span></div>
+            <div class="ingredient">
+                <p>33的档案室</p>
+                <p>ANKLEBONE_</p>
+                <p>阿边ni</p>
+                <p>熬夜磕CP真的会秃头</p>
+                <p>别惹我852</p>
+                <p>加点汽</p>
+                <p>Jisungalaxy</p>
+                <p>--哈哈</p>
+                <p>LALALYNNHAHABO</p>
+                <p>啦啦叽叽叽</p>
+                <p>榴莲盐汽水-</p>
+                <p>没作业很高兴认识你</p>
+                <p>南极熊TT</p>
+                <p>你的梦中梦中</p>
+                <p>三文九两</p>
+                <p>Tatabao塔塔塔塔</p>
+                <p>王崽圆又顺</p>
+                <p>万里鼎沸</p>
+                <p>云山长</p>
+                <p>拽姐不需要昵称</p>
+            </div>
+            <div class="dish1"><span>ao3</span></div>
+            <div class="ingredient">
+                <p>bookwormk111</p>
+                <p>boomboim</p>
+                <p>chninnm</p>
+                <p>DanRuCi7</p>
+                <p>Holate</p>
+                <p>桔梗：）</p>
+                <p>吉拉耳</p>
+                <p>Jiiiiiii</p>
+                <p>Liuliudashun</p>
+                <p>limejuice991</p>
+                <p>Olivaceous54</p>
+                <p>todaysaqkong</p>
+                <p>VinegarT</p>
+                <p>VeronicaSeven</p>
+            </div>
+            <div class="dish1"><span>豆瓣</span></div>
+            <div class="ingredient">
+                <p>Akrilik</p>
+                <p>BadgalJojo</p>
+                <p>吃点好的</p>
+                <p>都是尘土</p>
+                <p>金色三年</p>
+                <p>萌萌（振臂高呼</p>
+                <p>蜜桃四季春</p>
+                <p>miu囡囡</p>
+                <p>*momo</p>
+                <p>四水</p>
+                <p>小桃音麻衣</p>
+                <p>咸甜永动机</p>
+                <p>渝爱｜幼升小</p>
+                <p>游兵游兵</p>
+                <p>做作业（已疯</p>
+            </div>
+            <div class="dish1"><span>LOFTER</span></div>
+            <div class="ingredient">
+                <p>飞花满江树</p>
+                <p>Genius</p>
+                <p>柳三千</p>
+                <p>Serein'ss</p>
+                <p>十四街</p>
+                <p>Vicky_Lieu</p>
+                <p>辛塔_simta</p>
+            </div>
+            <div class="dish1"><span>抖音</span></div>
+            <div class="ingredient">
+                <p>谈资</p>
+                <p>远剑乒乓·银球高远体育</p>
+            </div>
+            <div class="dish1"><span>哈喽哈喽会有人看到这里嘛👀</span></div>
+            <div class="ingredient">
+                <p>之前的菜单藏太深好多片片都没找到，</p>
+                <p>这次换成这种超级简单的，</p>
+                <p>但是看起来好像有点不是很好看（？</p>
+                <p>大家有什么建议嘛？</p>
+                <p>时间线换了样式正在补充内容，暂时打不开🙇</p>
+                <p><a href="https://weibo.com/u/7878885268" target="_blank">任何补充请📫网站建设&内容补充都可以</a></p>
+            </div>
+        </div>
+    </div>
+    <div class="sy"><img src="./img/sy.png"></div>
+    </center>
+</body>
+<script>
+    // 获取元素
+    const navItems = document.querySelectorAll('.nav-item');
+    const menuSections = document.querySelectorAll('.menu-section');
+    
+    // 导航项点击事件
+    navItems.forEach(item => {
+        item.addEventListener('click', () => {
+            navItems.forEach(nav => nav.classList.remove('active'));
+            item.classList.add('active');
+            
+            const target = item.getAttribute('data-target');
+            menuSections.forEach(section => {
+                section.classList.remove('active');
+            });
+            
+            const activeSection = document.getElementById(`${target}-content`);
+            if (activeSection) {
+                activeSection.classList.add('active');
+            }
+        });
+    });
+</script>
+</html>
