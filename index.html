@@ -7,29 +7,97 @@
     <link rel="icon" href="./img/ym-sweet.jpg" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css?family=Lato:300|Sacramento" rel="stylesheet">
     <title>圆满河粉摊</title>
-<style>
-    body{
-        background-color: black;
+    <style>
+    * {
+    margin: 0;
+    padding: 0;
+    background-color: rgb(255, 249, 225);
     }
-    .container {
-    display: flex;
-    justify-content: center; /* 水平居中 */
-    align-items: center;     /* 垂直居中 */
-    height: 100vh;          /* 容器高度为视口高度的100% */
+    h1{
+        font-family:  'Sacramento';
+    }
+    :root {
+    --font-color-mi: #000;
+    --font-color-mi-hover: pink;
+    --color-bg-mi-hover: #ececec;
+    --border-radius-mi: 2px;
+    --transition-menu-time: 0.2s;
+    --color-line-bg: black;
+    }
+body{
+    background-color: rgb(255, 249, 225);
+    min-height: 100vh;
+    background-image: url('./img/ym-bg.jpg');
+    background-repeat: no-repeat;
+    background-position: center 0;
+    background-size:  auto 50%;
+    text-align: center;
+    font-family:ZhuZi GuDian,Times New Roman,Times,serif;
 }
+
+.title{
+            margin: 0;
+            padding: 0;
+            display:flex ;
+            position: absolute;
+            left: 50%;
+            margin-left: -100px;
+            top:55%;
+            align-items: center;
+            justify-items: center;
+            color: black;
+            font-size: 20px;
+            z-index: 1;
+        }
+        @font-face {
+        font-family: 'ZhuZi GuDian';
+        src: url("./fonts/FZFW_ZhuZiGuDian_MP_Regular.subset.woff2")
+        format("woff2");
+        font-weight: 400;
+        font-display: swap;
+    }
+    @font-face {
+    font-family: 'Rungli';
+    src: url('./fonts/Rungli_Italic_MP.subset.woff2') format("woff2");
+    font-weight: 400;
+    font-style: italic;
+    font-display: swap
+    }
+    @font-face {
+    font-family: 'Helveesti';
+    src: url('/fonts/ABCHelveesti-Regular_MP_Pinyin.subset.woff2') format("woff2");
+    font-weight: 400;
+    font-display: swap
+    }
+
     a.no-style:link, a.no-style:visited, a.no-style:hover, a.no-style:active {
     text-decoration: none; /* 移除下划线等装饰 */
-    color: yellow; /* 文字颜色继承父元素 */
+    color: inherit; /* 文字颜色继承父元素 */
     background: transparent; /* 背景透明 */
     border: none; /* 无边框 */
     padding: 0; /* 无内边距 */
     margin: 0; /* 无外边距 */
 }
-</style>
+
+    /* 跳转提示样式 */
+    .jump-notice {
+        position: fixed;
+        bottom: 20px;
+        left: 0;
+        right: 0;
+        text-align: center;
+        font-family: 'ZhuZi GuDian', serif;
+        color: #666;
+        font-size: 14px;
+    }
+    </style>
 </head>
-<body>
-<div class="container">
-    <div class="centered"><a class="no-style" href="menu.html">点击进入圆满河粉摊</a></div>
-</div>
+<body><div class="title"><h1>YuanMan</h1></div>
+    <script>
+        // 2秒后跳转到menu.html
+        setTimeout(function() {
+            window.location.href = 'menu.html';
+        }, 2000);
+    </script>
 </body>
 </html>
